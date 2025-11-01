@@ -5,10 +5,10 @@ import { EnvironmentService } from '../services/environment.service';
 import { AppConfig } from '../models/app-config.model';
 
 export function loadRuntimeConfig(buildTimeConfig: Partial<AppConfig> = {}) {
-  return (): Promise<void> => {
-    const http = inject(HttpClient);
-    const envService = inject(EnvironmentService);
+  const http = inject(HttpClient);
+  const envService = inject(EnvironmentService);
 
+  return (): Promise<void> => {
     return firstValueFrom(http.get<AppConfig>('/assets/config.json'))
       .then((runtimeConfig) => {
         // Merge build-time and runtime config (runtime takes precedence)
@@ -26,9 +26,9 @@ export function provideRuntimeConfig(buildTimeConfig: Partial<AppConfig> = {}): 
   return [
     {
       provide: APP_INITIALIZER,
-      useFactory: loadRuntimeConfig(buildTimeConfig),
+      useFactory: () => loadRuntimeConfig(buildTimeConfig),
       multi: true,
+      deps: [],
     },
   ];
 }
-
