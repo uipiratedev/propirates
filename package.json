@@ -81,6 +81,7 @@
     "@schematics/angular": "^20.3.8",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@tailwindcss/postcss": "^4.1.16",
     "@testing-library/angular": "^18.1.0",
     "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",

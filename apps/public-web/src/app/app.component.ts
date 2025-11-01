@@ -8,7 +8,7 @@ import { AuthService } from '@propirates/core/auth';
   imports: [RouterOutlet, RouterLink],
   template: `
     <div class="min-h-screen bg-background">
-      <nav class="bg-primary text-white shadow-lg">
+      <nav class="bg-primary text-white shadow-lg" *ngIf="authService">
         <div class="container mx-auto px-4 py-4">
           <div class="flex items-center justify-between">
             <h1 class="text-2xl font-bold">Propirates</h1>
@@ -16,19 +16,19 @@ import { AuthService } from '@propirates/core/auth';
               <a routerLink="/" class="hover:underline">Home</a>
               <a routerLink="/about" class="hover:underline">About</a>
               @if (authService.isAuthenticated()) {
-                <a routerLink="/dashboard" class="hover:underline">Dashboard</a>
-                @if (authService.hasRole('admin')) {
-                  <a routerLink="/admin" class="hover:underline">Admin</a>
-                }
-                <button (click)="logout()" class="hover:underline">Logout</button>
+              <a routerLink="/dashboard" class="hover:underline">Dashboard</a>
+              @if (authService.hasRole('admin')) {
+              <a routerLink="/admin" class="hover:underline">Admin</a>
+              }
+              <button (click)="logout()" class="hover:underline">Logout</button>
               } @else {
-                <a routerLink="/login" class="hover:underline">Login</a>
+              <a routerLink="/login" class="hover:underline">Login</a>
               }
             </div>
           </div>
         </div>
       </nav>
-      <main class="container mx-auto px-4 py-8">
+      <main class="container mx-auto px-4 ">
         <router-outlet />
       </main>
     </div>
@@ -42,4 +42,3 @@ export class AppComponent {
     this.authService.logout();
   }
 }
-
