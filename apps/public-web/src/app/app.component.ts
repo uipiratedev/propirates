@@ -8,7 +8,8 @@ import { AuthService } from '@propirates/core/auth';
   imports: [RouterOutlet, RouterLink],
   template: `
     <div class="min-h-screen bg-background">
-      <nav class="bg-primary text-white shadow-lg" *ngIf="authService">
+      @if (authService) {
+      <nav class="bg-primary text-white shadow-lg">
         <div class="container mx-auto px-4 py-4">
           <div class="flex items-center justify-between">
             <h1 class="text-2xl font-bold">Propirates</h1>
@@ -28,6 +29,7 @@ import { AuthService } from '@propirates/core/auth';
           </div>
         </div>
       </nav>
+      }
       <main class="container mx-auto px-4 ">
         <router-outlet />
       </main>
