@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "lib": ["ES2022", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@propirates/core/api": ["libs/core/api/src/index.ts"],
+      "@propirates/core/auth": ["libs/core/auth/src/index.ts"],
+      "@propirates/core/config": ["libs/core/config/src/index.ts"],
+      "@propirates/core/logging": ["libs/core/logging/src/index.ts"],
+      "@propirates/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@propirates/shared/utils": ["libs/shared/utils/src/index.ts"],
+      "@propirates/domains/users/data-access": ["libs/domains/users/data-access/src/index.ts"],
+      "@propirates/domains/users/feature": ["libs/domains/users/feature/src/index.ts"],
+      "@propirates/domains/users/ui": ["libs/domains/users/ui/src/index.ts"],
+      "@propirates/domains/reports/data-access": ["libs/domains/reports/data-access/src/index.ts"],
+      "@propirates/domains/reports/feature": ["libs/domains/reports/feature/src/index.ts"],
+      "@propirates/domains/reports/ui": ["libs/domains/reports/ui/src/index.ts"],
+      "@propirates/domains/settings/data-access": ["libs/domains/settings/data-access/src/index.ts"],
+      "@propirates/domains/settings/feature": ["libs/domains/settings/feature/src/index.ts"],
+      "@propirates/domains/settings/ui": ["libs/domains/settings/ui/src/index.ts"]
+    },
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "exclude": ["node_modules", "tmp"]
+}
+
