@@ -4,7 +4,7 @@
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
@@ -27,7 +27,9 @@
       "@propirates/domains/reports/data-access": ["libs/domains/reports/data-access/src/index.ts"],
       "@propirates/domains/reports/feature": ["libs/domains/reports/feature/src/index.ts"],
       "@propirates/domains/reports/ui": ["libs/domains/reports/ui/src/index.ts"],
-      "@propirates/domains/settings/data-access": ["libs/domains/settings/data-access/src/index.ts"],
+      "@propirates/domains/settings/data-access": [
+        "libs/domains/settings/data-access/src/index.ts"
+      ],
       "@propirates/domains/settings/feature": ["libs/domains/settings/feature/src/index.ts"],
       "@propirates/domains/settings/ui": ["libs/domains/settings/ui/src/index.ts"]
     },
@@ -39,4 +41,3 @@
   },
   "exclude": ["node_modules", "tmp"]
 }
-
