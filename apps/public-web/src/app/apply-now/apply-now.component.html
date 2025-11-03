@@ -18,7 +18,7 @@
         >
         <button
           (click)="resetForm()"
-          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500"
+          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-white hover:bg-emerald-500"
         >
           Start another application
         </button>
@@ -50,7 +50,7 @@
           >
           <a
             routerLink="/login"
-            class="rounded-2xl px-6 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+            class="rounded-2xl px-6 py-2 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
             >Login</a
           >
         </div>
@@ -94,7 +94,7 @@
                 type="button"
                 (click)="next()"
                 [disabled]="!canProceed()"
-                class="px-5 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500 disabled:opacity-50"
+                class="px-5 py-2 rounded-lg bg-primary text-white hover:bg-emerald-500 disabled:opacity-50"
               >
                 Next
               </button>
@@ -104,7 +104,7 @@
                 type="button"
                 (click)="submitForm()"
                 [disabled]="!canProceed()"
-                class="px-5 py-2 rounded-lg bg-emerald-700 text-white hover:bg-emerald-600 disabled:opacity-50"
+                class="px-5 py-2 rounded-lg bg-emerald-700 text-white hover:bg-primary disabled:opacity-50"
               >
                 Submit Application
               </button>
