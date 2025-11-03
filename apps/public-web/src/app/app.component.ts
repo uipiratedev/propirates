@@ -8,7 +8,7 @@ import { AuthService } from '@propirates/core/auth';
   imports: [RouterOutlet, RouterLink],
   template: `
     <div class="min-h-screen bg-background">
-      @if (authService) {
+      @if (authService.isAuthenticated()) {
       <nav class="bg-primary text-white shadow-lg">
         <div class="container mx-auto px-4 py-4">
           <div class="flex items-center justify-between">

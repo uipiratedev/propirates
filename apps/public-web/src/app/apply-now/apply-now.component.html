@@ -1,0 +1,194 @@
+<main class="min-h-screen bg-neutral-50 text-neutral-900 [color-scheme:light]">
+  <!-- Header -->
+  <header
+    class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200"
+  >
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span
+          class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 font-black text-lg"
+        >
+          ⚓
+        </span>
+        <span class="font-semibold tracking-tight">UI Pirate — Elite Mentorship</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a
+          href="/"
+          class="rounded-2xl px-6 py-2 border border-neutral-300 hover:border-neutral-400 transition"
+        >
+          Home
+        </a>
+        <a
+          href="/login"
+          class="rounded-2xl px-6 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+        >
+          Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Application Section -->
+  <section class="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+    <!-- Left: Form -->
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+        Apply <span class="text-emerald-600">Now</span>
+      </h1>
+      <p class="text-neutral-600 text-lg mb-10">
+        Show us your potential. We value skills, curiosity, and attitude more than your degree.
+      </p>
+
+      <form
+        class="space-y-6 bg-white border border-neutral-200 rounded-2xl p-8 shadow-sm"
+        (ngSubmit)="submitForm()"
+      >
+        <!-- Name -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-2">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-2">Email</label>
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
+        </div>
+
+        <!-- Experience -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-2">Experience Level</label>
+          <select
+            name="experience"
+            [(ngModel)]="formData.experience"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          >
+            <option value="" disabled selected>Select your experience</option>
+            <option value="beginner">Beginner (0–1 year)</option>
+            <option value="intermediate">Intermediate (1–3 years)</option>
+            <option value="advanced">Advanced (3+ years)</option>
+          </select>
+        </div>
+
+        <!-- Portfolio -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-2">Portfolio Link</label>
+          <input
+            type="url"
+            name="portfolio"
+            [(ngModel)]="formData.portfolio"
+            placeholder="https://yourportfolio.com"
+            class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          />
+        </div>
+
+        <!-- Goal -->
+        <div>
+          <label class="block text-sm font-medium text-neutral-700 mb-2"
+            >What do you want to achieve from this mentorship?</label
+          >
+          <textarea
+            name="goal"
+            [(ngModel)]="formData.goal"
+            rows="4"
+            required
+            class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          type="submit"
+          class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-lg transition"
+        >
+          Submit Application
+        </button>
+
+        <p *ngIf="submitted" class="text-emerald-600 mt-4 text-sm font-medium text-center">
+          ✅ Application submitted successfully! We’ll review it soon.
+        </p>
+      </form>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="bg-white border border-neutral-200 rounded-2xl p-10 shadow-sm">
+      <h2 class="text-2xl font-bold mb-4">Why Apply?</h2>
+      <p class="text-neutral-700 mb-6">
+        UI Pirate is a high-performance mentorship where we don’t just teach — we make you execute.
+        Our alumni work at top startups and design agencies globally.
+      </p>
+
+      <ul class="space-y-3 text-neutral-700">
+        <li>⚡ 1-on-1 design reviews with top UI mentors.</li>
+        <li>📈 Real project feedback every week.</li>
+        <li>💼 Portfolio & career guidance sessions.</li>
+        <li>🤝 Exclusive Discord community access.</li>
+        <li>🎯 Money-back guarantee if you deliver on goals.</li>
+      </ul>
+
+      <div class="mt-8 bg-emerald-50 border border-emerald-100 rounded-xl p-4 text-emerald-800">
+        <p class="font-semibold">Note:</p>
+        <p>We select only 30 candidates per batch to maintain focus and personalized guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail Section -->
+  <section class="max-w-5xl mx-auto px-6 py-20 border-t border-neutral-200">
+    <h2 class="text-3xl font-bold mb-6">What Happens After You Apply</h2>
+    <ol class="list-decimal ml-6 text-neutral-700 space-y-3">
+      <li>Our team reviews your submission within 48 hours.</li>
+      <li>If shortlisted, you’ll get a short intro call.</li>
+      <li>Once approved, you’ll receive a mentorship plan and payment link.</li>
+    </ol>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-8">
+      <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2">⏱ 3-Week Sprints</h3>
+        <p class="text-sm text-neutral-600">
+          Work on high-impact design challenges with weekly mentor reviews.
+        </p>
+      </div>
+      <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2">🎨 Build Real Projects</h3>
+        <p class="text-sm text-neutral-600">
+          You’ll design live UI systems — not just Figma mockups — for real startups.
+        </p>
+      </div>
+      <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <h3 class="font-semibold text-lg mb-2">🚀 Guaranteed Growth</h3>
+        <p class="text-sm text-neutral-600">
+          If you don’t improve visibly by the end of the program, we refund your fee.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 mt-16">
+    <div
+      class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500 flex flex-wrap items-center justify-between gap-4"
+    >
+      <p>© {{ currentYear }} UI Pirate. Work. Don’t talk.</p>
+      <div class="flex items-center gap-4">
+        <a href="/" class="hover:text-neutral-700"> Home </a>
+        <a href="/how-it-works" class="hover:text-neutral-700"> How it works </a>
+        <a href="/terms" class="hover:text-neutral-700"> Terms </a>
+      </div>
+    </div>
+  </footer>
+</main>

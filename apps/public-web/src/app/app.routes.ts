@@ -42,6 +42,30 @@ export const routes: Routes = [
     data: { featureTag: 'Public/Unauthorized' },
   },
   {
+    path: 'apply-now',
+    loadComponent: () => import('./apply-now/apply-now.component').then((m) => m.ApplyNowComponent),
+    data: { featureTag: 'Public/ApplyNow' },
+  },
+  {
+    path: 'how-it-works',
+    loadComponent: () =>
+      import('./how-it-works/how-it-works.component').then((m) => m.HowItWorksComponent),
+    data: { featureTag: 'Public/HowItWorks' },
+  },
+  {
+    path: 'terms',
+    loadComponent: () => import('./terms/terms.component').then((m) => m.TermsComponent),
+    data: { featureTag: 'Public/Terms' },
+  },
+  {
+    path: 'start-application',
+    loadComponent: () =>
+      import('./start-application/start-application.component').then(
+        (m) => m.StartApplicationComponent
+      ),
+    data: { featureTag: 'Public/StartApplication' },
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -1,29 +1,39 @@
 <main class="min-h-screen bg-neutral-50 text-neutral-900 [color-scheme:light]">
   <!-- Nav -->
   <header
-    class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200">
+    class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200"
+  >
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <span
-          class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 font-black text-lg">
+          class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 font-black text-lg"
+        >
           ⚓
         </span>
-        <span class="font-semibold tracking-tight">
-          UI Pirate — Elite Mentorship
-        </span>
+        <span class="font-semibold tracking-tight"> UI Pirate — Elite Mentorship </span>
       </div>
-      <a
-        [href]="APPLY_LINK"
-        class="rounded-xl px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
-        Apply Now
-      </a>
+      <div class="flex items-center gap-4">
+        <a
+          [href]="APPLY_LINK"
+          class="rounded-xl px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+        >
+          Apply Now
+        </a>
+        <a
+          href="/login"
+          class="rounded-2xl px-6 py-2 border border-neutral-300 hover:border-neutral-400 transition"
+        >
+          Login
+        </a>
+      </div>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="relative overflow-hidden">
     <div
-      class="absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_50%_-10%,#10b98122,transparent_60%)]"></div>
+      class="absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_50%_-10%,#10b98122,transparent_60%)]"
+    ></div>
     <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-8 items-center">
       <div class="md:col-span-7">
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
@@ -31,42 +41,48 @@
           <span class="text-emerald-600">Only results.</span>
         </h1>
         <p class="mt-6 text-lg text-neutral-600 max-w-2xl">
-          Global, live mentorship for designers who learn by doing. Build a
-          real SaaS product, redesign an enterprise app, and ship a
-          portfolio that looks experienced. No theory. No hand-holding. No
-          excuses.
+          Global, live mentorship for designers who learn by doing. Build a real SaaS product,
+          redesign an enterprise app, and ship a portfolio that looks experienced. No theory. No
+          hand-holding. No excuses.
         </p>
         <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-neutral-600">
           <span
-            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1">
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1"
+          >
             🌍 Global • English
           </span>
           <span
-            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1">
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1"
+          >
             👥 1–12 seats (pilot)
           </span>
           <span
-            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1">
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1"
+          >
             ⏱️ 6–8 weeks live
           </span>
           <span
-            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1">
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1"
+          >
             💳 {{ PRICE }}
           </span>
           <span
-            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1">
+            class="inline-flex items-center gap-2 rounded-full bg-neutral-100 border border-neutral-200 px-3 py-1"
+          >
             📅 {{ START_DATE }}
           </span>
         </div>
         <div class="mt-10 flex flex-wrap gap-4">
           <a
             [href]="APPLY_LINK"
-            class="rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
+            class="rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+          >
             Apply Now
           </a>
           <a
-            href="#how"
-            class="rounded-2xl px-6 py-3 border border-neutral-300 hover:border-neutral-400 transition">
+            href="/how-it-works"
+            class="rounded-2xl px-6 py-3 border border-neutral-300 hover:border-neutral-400 transition"
+          >
             How it works
           </a>
         </div>
@@ -77,13 +93,10 @@
       <div class="md:col-span-5">
         <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-2xl">
           <div class="text-sm text-neutral-500">Mentor</div>
-          <h3 class="mt-1 text-xl font-semibold">
-            Vishal — Founder, UI Pirate
-          </h3>
+          <h3 class="mt-1 text-xl font-semibold">Vishal — Founder, UI Pirate</h3>
           <p class="mt-3 text-neutral-600 text-sm leading-6">
-            8+ years building SaaS/UI systems. Trained 15–20 interns who
-            went on to earn 7–12 LPA+ and senior roles. This mentorship
-            formalizes the same results-first approach.
+            8+ years building SaaS/UI systems. Trained 15–20 interns who went on to earn 7–12 LPA+
+            and senior roles. This mentorship formalizes the same results-first approach.
           </p>
           <ul class="mt-4 space-y-2 text-sm text-neutral-600">
             <li>• Zero theory. Real deliverables.</li>
@@ -92,7 +105,8 @@
           </ul>
           <a
             [href]="APPLY_LINK"
-            class="mt-6 inline-flex rounded-xl px-4 py-2 bg-emerald-600 text-white font-semibold hover:bg-emerald-500 transition">
+            class="mt-6 inline-flex rounded-xl px-4 py-2 bg-emerald-600 text-white font-semibold hover:bg-emerald-500 transition"
+          >
             Start Application
           </a>
         </div>
@@ -105,18 +119,18 @@
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-bold">What you will do</h2>
       <p class="mt-3 text-neutral-600 max-w-2xl">
-        You learn by shipping. Expect deadlines, revisions, and standards
-        that mirror real product teams.
+        You learn by shipping. Expect deadlines, revisions, and standards that mirror real product
+        teams.
       </p>
 
       <div class="mt-10 grid md:grid-cols-3 gap-6">
         @for (item of whatYouWillDo; track item.title) {
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-            <h3 class="text-lg font-semibold">{{ item.title }}</h3>
-            <p class="mt-2 text-neutral-600 text-sm leading-6">
-              {{ item.desc }}
-            </p>
-          </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="text-lg font-semibold">{{ item.title }}</h3>
+          <p class="mt-2 text-neutral-600 text-sm leading-6">
+            {{ item.desc }}
+          </p>
+        </div>
         }
       </div>
 
@@ -148,38 +162,32 @@
   <!-- Selection flow -->
   <section class="border-t border-neutral-200">
     <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl md:text-4xl font-bold">
-        How selection works
-      </h2>
+      <h2 class="text-3xl md:text-4xl font-bold">How selection works</h2>
       <ol class="mt-8 grid md:grid-cols-3 gap-6 text-sm text-neutral-600">
         <li class="rounded-2xl border border-neutral-200 bg-white p-6">
           <span class="text-neutral-500">Step 1</span>
           <h3 class="text-lg font-semibold mt-1">Apply (2–3 mins)</h3>
-          <p class="mt-2">
-            Share who you are, your time, and any work. No DMs. No calls.
-          </p>
+          <p class="mt-2">Share who you are, your time, and any work. No DMs. No calls.</p>
         </li>
         <li class="rounded-2xl border border-neutral-200 bg-white p-6">
           <span class="text-neutral-500">Step 2</span>
           <h3 class="text-lg font-semibold mt-1">48-hour task</h3>
           <p class="mt-2">
-            Redesign one screen from any app. Submit Figma + 3 bullets. On
-            time or out.
+            Redesign one screen from any app. Submit Figma + 3 bullets. On time or out.
           </p>
         </li>
         <li class="rounded-2xl border border-neutral-200 bg-white p-6">
           <span class="text-neutral-500">Step 3</span>
           <h3 class="text-lg font-semibold mt-1">Start mentorship</h3>
-          <p class="mt-2">
-            If you pass, we begin immediately — even with a batch of 1.
-          </p>
+          <p class="mt-2">If you pass, we begin immediately — even with a batch of 1.</p>
         </li>
       </ol>
 
       <div class="mt-10">
         <a
           [href]="APPLY_LINK"
-          class="inline-flex rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
+          class="inline-flex rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+        >
           Apply Now
         </a>
       </div>
@@ -191,34 +199,30 @@
     <div class="max-w-6xl mx-auto px-4 py-16">
       <h2 class="text-3xl md:text-4xl font-bold">Performance Refund</h2>
       <p class="mt-3 text-neutral-600 max-w-2xl">
-        We reward outcomes. Finish the mentorship and land paid work within
-        60 days — get your money back.
+        We reward outcomes. Finish the mentorship and land paid work within 60 days — get your money
+        back.
       </p>
 
       <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
         @for (item of refundPolicy; track item.title) {
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-            <h3 class="font-semibold">{{ item.title }}</h3>
-            <p class="mt-2 text-neutral-600">
-              {{ item.desc.split('→')[0] }} →
-              <span class="font-semibold text-emerald-600">{{ item.highlight }}</span>
-              @if (item.desc.includes('After 60 days')) {
-                . After 60 days, refunds aren't guaranteed, but support continues.
-              }
-            </p>
-          </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-semibold">{{ item.title }}</h3>
+          <p class="mt-2 text-neutral-600">
+            {{ item.desc.split('→')[0] }} →
+            <span class="font-semibold text-emerald-600">{{ item.highlight }}</span>
+            @if (item.desc.includes('After 60 days')) { . After 60 days, refunds aren't guaranteed,
+            but support continues. }
+          </p>
+        </div>
         }
       </div>
 
       <ul class="mt-8 text-sm text-neutral-500 space-y-2">
         <li>
-          • Proof required: offer letter, paid invoice, client confirmation,
-          or verifiable live product revenue.
+          • Proof required: offer letter, paid invoice, client confirmation, or verifiable live
+          product revenue.
         </li>
-        <li>
-          • You must complete all program deliverables on time to be
-          eligible.
-        </li>
+        <li>• You must complete all program deliverables on time to be eligible.</li>
       </ul>
     </div>
   </section>
@@ -229,17 +233,18 @@
       <h2 class="text-3xl md:text-4xl font-bold">FAQ</h2>
       <div class="mt-8 grid md:grid-cols-2 gap-6 text-sm text-neutral-600">
         @for (faq of faqs; track faq.q) {
-          <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-            <h3 class="font-semibold">{{ faq.q }}</h3>
-            <p class="mt-2">{{ faq.a }}</p>
-          </div>
+        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
+          <h3 class="font-semibold">{{ faq.q }}</h3>
+          <p class="mt-2">{{ faq.a }}</p>
+        </div>
         }
       </div>
 
       <div class="mt-12">
         <a
           [href]="APPLY_LINK"
-          class="inline-flex rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition">
+          class="inline-flex rounded-2xl px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold transition"
+        >
           Apply Now
         </a>
         <p class="mt-4 text-neutral-500 text-sm">
@@ -252,20 +257,14 @@
   <!-- Footer -->
   <footer class="border-t border-neutral-200">
     <div
-      class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500 flex flex-wrap items-center justify-between gap-4">
+      class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500 flex flex-wrap items-center justify-between gap-4"
+    >
       <p>© {{ currentYear }} UI Pirate. Work. Don't talk.</p>
       <div class="flex items-center gap-4">
-        <a [href]="APPLY_LINK" class="hover:text-neutral-700">
-          Apply
-        </a>
-        <a href="#how" class="hover:text-neutral-700">
-          How it works
-        </a>
-        <a href="#" class="hover:text-neutral-700">
-          Terms
-        </a>
+        <a [href]="APPLY_LINK" class="hover:text-neutral-700"> Apply </a>
+        <a href="/how-it-works" class="hover:text-neutral-700"> How it works </a>
+        <a href="/terms" class="hover:text-neutral-700"> Terms </a>
       </div>
     </div>
   </footer>
 </main>
-

@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './landing.component.css',
 })
 export class LandingComponent {
-  readonly APPLY_LINK = 'https://forms.gle/your-form-id'; // Replace with your Google Form URL
+  // readonly APPLY_LINK = 'https://forms.gle/your-form-id'; // Replace with your Google Form URL
+  readonly APPLY_LINK = '/start-application';
   readonly START_DATE = 'Starts Nov 15'; // Update as needed
   readonly PRICE = '$199'; // Update if needed
   readonly currentYear = new Date().getFullYear();
@@ -42,7 +43,7 @@ export class LandingComponent {
     },
     {
       title: 'Up to 60 days',
-      desc: 'Success within 60 days → 100% refund. After 60 days, refunds aren\'t guaranteed, but support continues.',
+      desc: "Success within 60 days → 100% refund. After 60 days, refunds aren't guaranteed, but support continues.",
       highlight: '100% refund',
     },
   ];
@@ -50,11 +51,11 @@ export class LandingComponent {
   readonly faqs = [
     {
       q: 'Is this beginner-friendly?',
-      a: 'Yes, if you\'re serious. You must show any attempt at work and commit ≥6 hours/week.',
+      a: "Yes, if you're serious. You must show any attempt at work and commit ≥6 hours/week.",
     },
     {
       q: 'Are there recordings?',
-      a: 'No. It\'s live/async, feedback-first. You learn by shipping.',
+      a: "No. It's live/async, feedback-first. You learn by shipping.",
     },
     {
       q: 'Do you guarantee jobs?',
@@ -66,4 +67,3 @@ export class LandingComponent {
     },
   ];
 }
-
