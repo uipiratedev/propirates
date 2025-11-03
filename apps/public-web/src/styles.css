@@ -23,6 +23,68 @@
   .gradent-border {
     @apply p-[2px] bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-500 hover:from-emerald-500 hover:via-blue-500 hover:to-purple-600;
   }
+
+  /* 🌈 Reusable Gradient Border Utility */
+  .gradient-border {
+    position: relative;
+    border-radius: 1rem; /* same as rounded-2xl */
+    padding: 2px;
+    background: linear-gradient(
+      89.9deg,
+      #f7de04 4.58%,
+      #11c781 27.52%,
+      #0cc784 27.53%,
+      #05a2fb 48.18%,
+      #5e72e4 72.05%,
+      #f04800 92.7%
+    );
+    transition: all 0.5s ease;
+  }
+
+  .gradient-border:hover {
+    background: linear-gradient(
+      89.9deg,
+      #f7de04 4.58%,
+      #11c781 27.52%,
+      #0cc784 27.53%,
+      #05a2fb 48.18%,
+      #5e72e4 72.05%,
+      #f04800 92.7%
+    );
+    filter: brightness(1.1);
+  }
+
+  /* Optional inner content wrapper to preserve rounded edges */
+  .gradient-border > .inner-card {
+    background: white;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    padding: 2rem; /* same as p-8 in Tailwind */
+  }
+  /* 🌈 Gradient Border on Hover */
+  .gradient-border-hover {
+    position: relative;
+    border-radius: 1rem; /* same as rounded-2xl */
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+  }
+
+  .gradient-border-hover:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(
+          89.9deg,
+          #f7de04 4.58%,
+          #11c781 27.52%,
+          #0cc784 27.53%,
+          #05a2fb 48.18%,
+          #5e72e4 72.05%,
+          #f04800 92.7%
+        )
+        border-box;
+    transition: all 0.4s ease;
+  }
 }
 
 :root {
