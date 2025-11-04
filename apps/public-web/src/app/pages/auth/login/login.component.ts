@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from '@propirates/core/auth';
@@ -6,7 +7,7 @@ import { AuthService } from '@propirates/core/auth';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [CommonModule, FormsModule],
   template: `
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
       <div class="max-w-md w-full bg-white p-8 rounded-xl shadow-lg">

@@ -100,6 +100,7 @@ npx nx affected --target=build  # Build only affected projects
 ### Build Output
 
 Production builds are output to:
+
 ```
 dist/apps/public-web/browser/
 ```
@@ -183,17 +184,20 @@ The project follows a three-tier architecture for organizing code:
 #### **Tier 1: `libs/core/` - Monorepo-Wide Libraries**
 
 **When to use:**
+
 - Code used by **multiple apps** in the monorepo
 - Core business logic shared across apps
 - Infrastructure services (auth, logging, API)
 
 **Current libraries:**
+
 - `@propirates/core/auth` - Authentication & authorization
 - `@propirates/core/api` - HTTP client and interceptors
 - `@propirates/core/config` - Runtime configuration
 - `@propirates/core/logging` - Logging system
 
 **Import example:**
+
 ```typescript
 import { AuthService } from '@propirates/core/auth';
 import { LogService } from '@propirates/core/logging';
@@ -203,16 +207,19 @@ import { BaseApiService } from '@propirates/core/api';
 #### **Tier 2: `apps/public-web/src/app/core/` - App-Specific Core**
 
 **When to use:**
+
 - Services specific to **this app only**
 - App-level state management
 - App-specific API wrappers
 
 **Examples:**
+
 - SEO service (only used by public-web)
 - Analytics service (only used by public-web)
 - App-specific state management
 
 **Import example:**
+
 ```typescript
 import { SeoService } from '../../core/services/seo.service';
 ```
@@ -220,12 +227,14 @@ import { SeoService } from '../../core/services/seo.service';
 #### **Tier 3: `apps/public-web/src/app/shared/` - App-Specific Shared Code**
 
 **When to use:**
+
 - Reusable UI components (buttons, cards, modals)
 - Custom directives (tooltips, highlights)
 - Custom pipes (date formatting, currency)
 - Utility functions specific to this app
 
 **Structure:**
+
 ```
 apps/public-web/src/app/shared/
 ├── components/    # Reusable UI components
@@ -235,6 +244,7 @@ apps/public-web/src/app/shared/
 ```
 
 **Import example:**
+
 ```typescript
 import { ButtonComponent } from '../../../shared/components/button/button.component';
 ```
@@ -256,11 +266,13 @@ Is it used by multiple apps?
 ### Creating a New Page Component
 
 1. **Create the component directory:**
+
 ```bash
 mkdir -p apps/public-web/src/app/pages/public/my-page
 ```
 
 2. **Create component files:**
+
 ```typescript
 // my-page.component.ts
 import { Component } from '@angular/core';
@@ -279,6 +291,7 @@ export class MyPageComponent {}
 ```
 
 3. **Add route:**
+
 ```typescript
 // apps/public-web/src/app/app.routes.ts
 {
@@ -294,12 +307,14 @@ export class MyPageComponent {}
 **For app-specific API calls:**
 
 1. **Create service in app core:**
+
 ```bash
 # Create directory
 mkdir -p apps/public-web/src/app/core/services
 ```
 
 2. **Create the service:**
+
 ```typescript
 // apps/public-web/src/app/core/services/user-api.service.ts
 import { Injectable, inject } from '@angular/core';
@@ -313,7 +328,7 @@ export interface User {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserApiService {
   private api = inject(BaseApiService);
@@ -333,6 +348,7 @@ export class UserApiService {
 ```
 
 3. **Use in component:**
+
 ```typescript
 import { UserApiService } from '../../core/services/user-api.service';
 
@@ -340,7 +356,7 @@ export class MyComponent {
   private userApi = inject(UserApiService);
 
   loadUsers() {
-    this.userApi.getUsers().subscribe(users => {
+    this.userApi.getUsers().subscribe((users) => {
       console.log(users);
     });
   }
@@ -361,7 +377,7 @@ export function formatDate(date: Date): string {
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   });
 }
 
@@ -372,6 +388,7 @@ export function isToday(date: Date): boolean {
 ```
 
 **Usage:**
+
 ```typescript
 import { formatDate } from '../../../shared/utils/date-helpers';
 
@@ -393,9 +410,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-button',
   standalone: true,
   template: `
-    <button 
-      [class]="'px-4 py-2 rounded ' + variant + ' ' + customClass"
-      [disabled]="disabled">
+    <button [class]="'px-4 py-2 rounded ' + variant + ' ' + customClass" [disabled]="disabled">
       <ng-content></ng-content>
     </button>
   `,
@@ -408,6 +423,7 @@ export class ButtonComponent {
 ```
 
 **Usage:**
+
 ```html
 <app-button variant="primary">Click Me</app-button>
 ```
@@ -415,6 +431,179 @@ export class ButtonComponent {
 ---
 
 ## 🎯 Common Development Tasks
+
+### ⚡ Generating Code with Nx Generators (REQUIRED)
+
+**🚨 MANDATORY POLICY: All Angular artifacts MUST be generated using Nx generators or Angular CLI. Manual file creation is strictly prohibited.**
+
+#### Why This is Mandatory
+
+Using Nx generators is not optional—it's a critical requirement for maintaining project quality:
+
+- ✅ **Ensures consistent file structure and naming conventions** across the entire codebase
+- ✅ **Automatically generates proper TypeScript configuration** (imports, decorators, metadata)
+- ✅ **Adds correct imports and module declarations** without manual errors
+- ✅ **Follows Angular and Nx best practices** out of the box
+- ✅ **Prevents boilerplate errors and configuration mistakes** that waste debugging time
+- ✅ **Maintains project-wide consistency** making code reviews easier
+- ✅ **Integrates with Nx's dependency graph** for better build optimization
+- ✅ **Organizes files into dedicated directories** (when using `--directory` flag)
+
+**❌ DO NOT manually create `.ts` files for components, services, guards, pipes, or directives.**
+
+---
+
+#### Available Generators
+
+Nx provides comprehensive generators for all Angular artifacts. Use the full syntax for clarity or the short syntax for speed:
+
+| Artifact        | Full Command                                     | Short Command                             |
+| --------------- | ------------------------------------------------ | ----------------------------------------- |
+| **Component**   | `npx nx generate @nx/angular:component <name>`   | `npx nx g @nx/angular:c <name>`           |
+| **Service**     | `npx nx generate @nx/angular:service <name>`     | `npx nx g @nx/angular:s <name>`           |
+| **Guard**       | `npx nx generate @nx/angular:guard <name>`       | `npx nx g @nx/angular:guard <name>`       |
+| **Interceptor** | `npx nx generate @nx/angular:interceptor <name>` | `npx nx g @nx/angular:interceptor <name>` |
+| **Pipe**        | `npx nx generate @nx/angular:pipe <name>`        | `npx nx g @nx/angular:p <name>`           |
+| **Directive**   | `npx nx generate @nx/angular:directive <name>`   | `npx nx g @nx/angular:d <name>`           |
+| **Library**     | `npx nx generate @nx/angular:library <name>`     | `npx nx g @nx/angular:lib <name>`         |
+| **Application** | `npx nx generate @nx/angular:application <name>` | `npx nx g @nx/angular:app <name>`         |
+
+---
+
+#### Important Flags and Options
+
+Master these flags to control exactly how and where files are generated:
+
+| Flag                 | Description                                                                                                   | Example                                        |
+| -------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| `--project=<name>`   | **Required:** Specify which app/library to generate in                                                        | `--project=public-web`                         |
+| `--directory=<path>` | **Highly Recommended:** Specify subdirectory within the project. Creates a dedicated folder for the artifact. | `--directory=pages/public/contact`             |
+| `--path=<full-path>` | Specify exact directory path (alternative to `--directory`)                                                   | `--path=apps/public-web/src/app/core/services` |
+| `--standalone`       | Generate standalone component (default in Angular 20)                                                         | `--standalone`                                 |
+| `--skip-tests`       | Skip test file generation                                                                                     | `--skip-tests`                                 |
+| `--export`           | Export from library index (for libraries)                                                                     | `--export`                                     |
+| `--dry-run`          | **Preview what will be generated without creating files**                                                     | `--dry-run`                                    |
+| `--flat`             | ⚠️ Generate files without creating a dedicated directory (avoid this)                                         | `--flat`                                       |
+
+**⚠️ Important:** Always use `--directory` to organize generated files into dedicated folders. Avoid `--flat` which scatters files in the parent directory.
+
+---
+
+#### Practical Examples for This Project
+
+```bash
+# ✅ Generate a new public page component in its own directory
+npx nx g @nx/angular:component contact \
+  --project=public-web \
+  --directory=pages/public/contact \
+  --standalone
+
+# ✅ Generate a service in the core directory
+npx nx g @nx/angular:service analytics \
+  --project=public-web \
+  --directory=core/services
+
+# ✅ Generate an authentication guard
+npx nx g @nx/angular:guard auth \
+  --project=public-web \
+  --directory=core/guards
+
+# ✅ Generate a custom pipe for formatting
+npx nx g @nx/angular:pipe currency-format \
+  --project=public-web \
+  --directory=shared/pipes
+
+# ✅ Generate a directive for custom behavior
+npx nx g @nx/angular:directive highlight \
+  --project=public-web \
+  --directory=shared/directives
+
+# ✅ Preview generation without creating files (ALWAYS test first!)
+npx nx g @nx/angular:component my-component \
+  --project=public-web \
+  --directory=pages/public/my-component \
+  --dry-run
+
+# ✅ Generate a component without tests (for rapid prototyping)
+npx nx g @nx/angular:component quick-prototype \
+  --project=public-web \
+  --directory=pages/public/quick-prototype \
+  --skip-tests
+
+# ✅ Generate a new library in the monorepo
+npx nx g @nx/angular:library feature-payments \
+  --directory=libs/features/payments \
+  --standalone
+```
+
+---
+
+#### Nx vs Angular CLI
+
+**In an Nx workspace, always use `nx generate` instead of `ng generate`:**
+
+- ✅ **Recommended:** `npx nx generate @nx/angular:component my-component`
+- ⚠️ **Works but not recommended:** `ng generate component my-component` (delegates to Nx under the hood)
+
+**Why use `nx generate`?**
+
+- Access to Nx-specific features and optimizations
+- Better integration with Nx's dependency graph
+- Consistent with other Nx commands (`nx build`, `nx test`, etc.)
+- Clearer intent in a monorepo environment
+
+---
+
+#### Directory Organization Best Practice
+
+**🎯 CRITICAL: Always use the `--directory` flag to organize generated files into dedicated folders.**
+
+Following the three-tier architecture, generate files in the appropriate location:
+
+```bash
+# ❌ BAD: Generates files scattered in src/app/
+npx nx g @nx/angular:component my-component --project=public-web --flat
+
+# ✅ GOOD: Generates files in dedicated directory src/app/pages/public/my-component/
+npx nx g @nx/angular:component my-component \
+  --project=public-web \
+  --directory=pages/public/my-component
+```
+
+**Directory structure after using `--directory`:**
+
+```
+apps/public-web/src/app/pages/public/my-component/
+├── my-component.component.ts
+├── my-component.component.html
+├── my-component.component.css
+└── my-component.component.spec.ts
+```
+
+---
+
+#### Quick Reference: Most Common Commands
+
+```bash
+# Generate a public page component
+npx nx g @nx/angular:c <name> --project=public-web --directory=pages/public/<name>
+
+# Generate a core service
+npx nx g @nx/angular:s <name> --project=public-web --directory=core/services
+
+# Generate a shared component
+npx nx g @nx/angular:c <name> --project=public-web --directory=shared/components/<name>
+
+# Generate a guard
+npx nx g @nx/angular:guard <name> --project=public-web --directory=core/guards
+
+# Preview before generating (add --dry-run to any command)
+npx nx g @nx/angular:c <name> --project=public-web --directory=pages/public/<name> --dry-run
+```
+
+**💡 Pro Tip:** Always run with `--dry-run` first to preview what will be generated, then remove the flag to actually create the files.
+
+---
 
 ### Adding Authentication to a Route
 
@@ -471,16 +660,12 @@ export class MyComponent {
 <!-- Responsive layout -->
 <div class="container mx-auto px-4">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="bg-white p-6 rounded-lg shadow">
-      Card content
-    </div>
+    <div class="bg-white p-6 rounded-lg shadow">Card content</div>
   </div>
 </div>
 
 <!-- Custom colors (defined in styles.css) -->
-<button class="bg-primary text-white hover:bg-primary-dark">
-  Primary Button
-</button>
+<button class="bg-primary text-white hover:bg-primary-dark">Primary Button</button>
 ```
 
 ### Logging
@@ -570,11 +755,13 @@ vercel --prod
 ### Deployment to Other Platforms
 
 **Netlify:**
+
 ```bash
 netlify deploy --prod --dir=dist/apps/public-web/browser
 ```
 
 **Firebase:**
+
 ```bash
 firebase deploy
 ```
@@ -600,27 +787,32 @@ Runtime configuration is managed via `apps/public-web/src/assets/config.json`:
 ### Common Issues
 
 **Port already in use:**
+
 ```bash
 npx kill-port 4200
 ```
 
 **Clear Nx cache:**
+
 ```bash
 npx nx reset
 ```
 
 **Reinstall dependencies:**
+
 ```bash
 rm -rf node_modules package-lock.json
 npm install
 ```
 
 **Tailwind CSS not working:**
+
 1. Verify `postcss.config.js` exists
 2. Check `@tailwind` directives in `apps/public-web/src/styles.css`
 3. Restart dev server
 
 **TypeScript path resolution issues:**
+
 1. Restart TypeScript server in VS Code: `Ctrl+Shift+P` → "TypeScript: Restart TS Server"
 2. Verify `tsconfig.base.json` has correct path mappings
 3. Check that app's `tsconfig.json` extends `tsconfig.base.json`
@@ -643,6 +835,7 @@ docs(readme): update installation instructions
 ```
 
 ### Types
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -677,4 +870,3 @@ For detailed contribution guidelines, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 ---
 
 **Happy coding! 🎉**
-
