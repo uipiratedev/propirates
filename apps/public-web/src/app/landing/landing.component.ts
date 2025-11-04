@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+interface CardData {
+  heading: string;
+  subHeding: string;
+  subtitle1: string;
+  subtitle2: string;
+  hoverBg: string;
+  textHover: string;
+}
+
 @Component({
   selector: 'app-landing',
   standalone: true,
@@ -84,6 +93,52 @@ export class LandingComponent {
     'You hate feedback',
     'You can’t handle pressure',
   ];
+
+  // Section 3 - Do not apply if
+  hoveredIndex: number | null = null;
+
+  data: CardData[] = [
+    {
+      heading: '50+',
+      subHeding: 'From MVPs to complex dashboards, shipped across 6 countries',
+      subtitle1: 'Projects',
+      subtitle2: 'Completed',
+      hoverBg: '#dd3500e6',
+      textHover: '#fff',
+    },
+    {
+      heading: '20+',
+      subHeding: 'Including AI tools, HR platforms, fintech apps, and B2B SaaS products',
+      subtitle1: 'Enterprise',
+      subtitle2: 'Clients',
+      hoverBg: '#8EF1F1E5',
+      textHover: '#000',
+    },
+    {
+      heading: '20+',
+      subHeding: 'SaaS, EdTech, FinTech, HealthTech, LegalTech, Creator Economy, and more',
+      subtitle1: 'Industries',
+      subtitle2: 'Served',
+      hoverBg: '#b0ddcae6',
+      textHover: '#000',
+    },
+    {
+      heading: '9+',
+      subHeding: 'Built for scale, speed, and seamless handoff to developers',
+      subtitle1: 'Years of',
+      subtitle2: 'Experience',
+      hoverBg: '#f4e342e6',
+      textHover: '#000',
+    },
+  ];
+
+  handleMouseEnter(index: number) {
+    this.hoveredIndex = index;
+  }
+
+  handleMouseLeave() {
+    this.hoveredIndex = null;
+  }
 
   // refunds
   refunds = [
