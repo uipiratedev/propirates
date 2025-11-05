@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { Modal } from '../../../shared/components/modal';
 
 interface CardData {
   heading: string;
@@ -13,7 +15,7 @@ interface CardData {
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, Modal],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })
@@ -67,7 +69,7 @@ export class LandingComponent {
   // What is the outcome
   outcomes = [
     'A portfolio that looks <span class="text-primary font-semibold">senior and experienced</span>',
-    'Confidence to work with clients or teams',
+    '<span class="text-primary font-semibold">Confidence to work </span> with clients or teams',
     'Practical and user-centric <span class="text-primary font-semibold">product mindset</span>',
     'Real-world <span class="text-primary font-semibold">output</span> (not classroom theory)',
     'Work discipline, structure, clarity and <span class="text-primary font-semibold">decision–making</span>',
@@ -147,15 +149,15 @@ export class LandingComponent {
   refunds = [
     {
       range: '15–30 days',
-      text: '<span class="font-semibold text-primary">100% refund</span>',
+      text: '<span class="font-bold text-primary">100%   <br /> refund</span>',
     },
     {
       range: '30–45 days',
-      text: '<span class="font-semibold text-primary">50% refund</span>',
+      text: '<span class="font-bold text-primary">50%   <br /> refund</span>',
     },
     {
       range: 'Up to 60 days',
-      text: '<span class="font-semibold text-primary">25% refund</span>',
+      text: '<span class="font-bold text-primary">25%   <br /> refund</span>',
     },
   ];
 
@@ -209,5 +211,64 @@ export class LandingComponent {
       q: 'How do I start?',
       a: 'Apply → complete 48-hour task → if accepted, we start immediately (even with a batch of 1).',
     },
+    {
+      q: 'Will I get refund if I am already working?',
+      a: 'Perfect. Ship a freelance task, internal delivery, or get a new role — refund applies as per ladder.',
+    },
+    {
+      q: 'I’m a student. Can I afford this?',
+      a: 'Yes. Top applicants can earn 30–50% scholarship. And if you land a paid internship or gig within 60 days, you earn the fee back.',
+    },
+    {
+      q: 'Why charge a fee at all?',
+      a: 'Free things are ignored. This is a commitment fee. It makes people show up, finish, and perform like professionals.',
+    },
+    {
+      q: 'Is refund guaranteed?',
+      a: 'No. Real world isn’t guaranteed. We select for hunger and discipline, then coach you to deliver.',
+    },
+    {
+      q: 'What kills my refund eligibility?',
+      a: 'Plagiarism, disappearing, quitting, or missing deadlines without communication.',
+    },
   ];
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Modal state management
+  showLearnMoreModal = false;
+  learnMoreModalType: 'free' | 'paid' | 'scholarship' = 'free';
+
+  /**
+   * Opens the Learn More modal with specific pricing details
+   * @param type - The type of pricing plan to show details for
+   */
+  openLearnMoreModal(type: 'free' | 'paid' | 'scholarship'): void {
+    this.learnMoreModalType = type;
+    this.showLearnMoreModal = true;
+  }
+
+  /**
+   * Closes the Learn More modal
+   */
+  closeLearnMoreModal(): void {
+    this.showLearnMoreModal = false;
+  }
+
+  /**
+   * Gets the modal title based on the selected type
+   */
+  getModalTitle(): string {
+    switch (this.learnMoreModalType) {
+      case 'free':
+        return 'Free Advice - Details';
+      case 'paid':
+        return 'Full Mentorship - Details';
+      case 'scholarship':
+        return 'Scholarship for Students';
+      default:
+        return 'Pricing Details';
+    }
+  }
 }
