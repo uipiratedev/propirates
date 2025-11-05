@@ -1,60 +1,83 @@
 # Propirates
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A modern web application built with Angular 20 and organized as an Nx monorepo.
 
-## Development server
-
-To start a local development server, run:
+## 🚀 Quick Start
 
 ```bash
-ng serve
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Open browser to http://localhost:4200/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📦 Tech Stack
 
-## Code scaffolding
+- **Framework:** Angular 20 (standalone components)
+- **Build Tool:** Nx 22.x (monorepo)
+- **Styling:** Tailwind CSS v3.4
+- **Testing:** Jest + Cypress
+- **Language:** TypeScript (strict mode)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🎯 Key Features
+
+- ✅ Monorepo architecture with Nx
+- ✅ Role-based access control (RBAC)
+- ✅ Centralized logging system
+- ✅ HTTP interceptors for auth and error handling
+- ✅ Runtime configuration management
+- ✅ Lazy-loaded routes
+- ✅ Responsive design with Tailwind CSS
+
+## 📚 Documentation
+
+- **[Developer Guide](./DEVELOPER_GUIDE.md)** - Complete development guide
+- **[Quick Reference](./QUICK_REFERENCE.md)** - Command cheat sheet
+- **[Contributing](./CONTRIBUTING.md)** - Contribution guidelines
+
+## 🛠️ Essential Commands
 
 ```bash
-ng generate component component-name
+npm start                    # Start dev server
+npm run build               # Production build
+npm test                    # Run tests
+npm run lint                # Lint code
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📁 Project Structure
+
+```
+propirates/
+├── apps/
+│   └── public-web/         # Public-facing web app
+├── libs/
+│   ├── core/              # Core libraries (auth, api, logging, config)
+│   ├── shared/            # Shared UI and utilities
+│   └── domains/           # Domain-specific features
+└── ...
+```
+
+## 🚀 Deployment
+
+The project is configured for deployment to Vercel:
 
 ```bash
-ng generate --help
+vercel --prod
 ```
 
-## Building
+Build output: `dist/apps/public-web/browser/`
 
-To build the project run:
+## 🤝 Contributing
 
-```bash
-ng build
-```
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 📄 License
 
-## Running unit tests
+[Add your license here]
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# propirates
+**For detailed development instructions, see [DEVELOPER_GUIDE.md](./DEVELOPER_GUIDE.md)**
