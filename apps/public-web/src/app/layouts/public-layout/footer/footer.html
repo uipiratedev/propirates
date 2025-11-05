@@ -1,4 +1,6 @@
-<footer class="bg-primary text-white px-4 md:px-8 lg:px-11 py-12 mt-12 font-['Plus_Jakarta_Sans']">
+<footer
+  class="bg-gradient-to-b from-primary via-black to-black text-white px-4 md:px-8 lg:px-11 py-12 mt-12 font-['Plus_Jakarta_Sans']"
+>
   <div
     class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0"
   >
@@ -31,15 +33,60 @@
   </div>
 
   <!-- Divider -->
-  <div
-    class="border-t border-white/30 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/80"
-  >
-    <p>© 2025 UI Pirate. Work. Don't talk.</p>
 
-    <div class="flex gap-6 mt-4 md:mt-0">
-      <a routerLink="/apply-now" class="hover:text-white">Apply</a>
-      <a routerLink="/how-it-works" class="hover:text-white">How it works</a>
-      <a routerLink="/terms" class="hover:text-white">Terms</a>
+  <div
+    class="border-t border-white/30 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-base text-white/80"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary font-black text-lg"
+          >
+            <img
+              src="https://res.cloudinary.com/damm9iwho/image/upload/v1762188181/logo_mwqce0.svg"
+              alt="ProPirates Logo"
+            />
+          </span>
+          <span class="font-semibold tracking-tight text-2xl text-white">ProPirates</span>
+        </div>
+        <p class="text-base">Execution-first mentorship for those who want to grow fast.</p>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Product</h3>
+        <ul class="space-y-2 text-base">
+          <li><a routerLink="/features" class="hover:text-white transition">Features</a></li>
+          <li><a routerLink="/pricing" class="hover:text-white transition">Pricing</a></li>
+          <li>
+            <a routerLink="/how-it-works" class="hover:text-white transition">How it Works</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Company</h3>
+        <ul class="space-y-2 text-base">
+          <li><a routerLink="/about" class="hover:text-white transition">About</a></li>
+          <li><a routerLink="/blog" class="hover:text-white transition">Blog</a></li>
+          <li><a routerLink="/contact" class="hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="font-semibold text-white mb-4">Legal</h3>
+        <ul class="space-y-2 text-base">
+          <li><a routerLink="/privacy" class="hover:text-white transition">Privacy Policy</a></li>
+          <li><a routerLink="/terms" class="hover:text-white transition">Terms of Service</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <div class="mt-8 pt-8 text-base text-center">
+    <p>&copy; {{ currentYear }} ProPirates. All rights reserved.</p>
   </div>
 </footer>
