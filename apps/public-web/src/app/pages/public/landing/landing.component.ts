@@ -66,22 +66,22 @@ export class LandingComponent {
 
   // What is the outcome
   outcomes = [
-    'A portfolio that looks <span class="text-green-700 font-semibold">senior and experienced</span>',
+    'A portfolio that looks <span class="text-primary font-semibold">senior and experienced</span>',
     'Confidence to work with clients or teams',
-    'Practical and user-centric <span class="text-green-700 font-semibold">product mindset</span>',
-    'Real-world <span class="text-green-700 font-semibold">output</span> (not classroom theory)',
-    'Work discipline, structure, clarity and <span class="text-green-700 font-semibold">decision–making</span>',
-    '<span class="text-green-700 font-semibold">Independent and accountable</span> – no spoon feeding',
+    'Practical and user-centric <span class="text-primary font-semibold">product mindset</span>',
+    'Real-world <span class="text-primary font-semibold">output</span> (not classroom theory)',
+    'Work discipline, structure, clarity and <span class="text-primary font-semibold">decision–making</span>',
+    '<span class="text-primary font-semibold">Independent and accountable</span> – no spoon feeding',
   ];
 
   // Section 1 - Reasons professionals join
   joinReasons = [
-    'Get <span class="text-green-700 font-semibold">Unstuck</span>',
-    'Upgrade <span class="text-green-700 font-semibold">Portfolio</span>',
-    'Learn <span class="text-green-700 font-semibold">Clean Delivery</span>',
-    'Handle Real <span class="text-green-700 font-semibold">Teamwork</span>',
-    'Build <span class="text-green-700 font-semibold">Confidence</span>',
-    'Boost <span class="text-green-700 font-semibold">Growth</span>',
+    'Get <span class="text-primary font-semibold">Unstuck</span>',
+    'Upgrade <span class="text-primary font-semibold">Portfolio</span>',
+    'Learn <span class="text-primary font-semibold">Clean Delivery</span>',
+    'Handle Real <span class="text-primary font-semibold">Teamwork</span>',
+    'Build <span class="text-primary font-semibold">Confidence</span>',
+    'Boost <span class="text-primary font-semibold">Growth</span>',
   ];
 
   // Section 2 - Success stories / Do not apply list
@@ -99,34 +99,37 @@ export class LandingComponent {
 
   data: CardData[] = [
     {
-      heading: '50+',
-      subHeding: 'From MVPs to complex dashboards, shipped across 6 countries',
-      subtitle1: 'Projects',
-      subtitle2: 'Completed',
+      heading: 'Quick Screening (1–2 minutes)',
+      subHeding:
+        'You fill a short form. Choose your track (UI/UX Design or UI Development), tell us who you are, and   <span class="text-primary">why you want this',
+      subtitle1: 'No long answers. No stories. Just truth.',
+      subtitle2: '1',
       hoverBg: '#dd3500e6',
       textHover: '#fff',
     },
     {
-      heading: '20+',
-      subHeding: 'Including AI tools, HR platforms, fintech apps, and B2B SaaS products',
-      subtitle1: 'Enterprise',
-      subtitle2: 'Clients',
+      heading: 'Mindset & Ambition Round',
+      subHeding:
+        'We look at discipline, honesty, commitment, learning attitude, and clarity of goal.  to understand  <span class="text-primary">how serious you are.</span>',
+      subtitle1: 'Sent only to shortlisted applicants within 24 hours',
+      subtitle2: '2',
       hoverBg: '#8EF1F1E5',
       textHover: '#000',
     },
     {
-      heading: '20+',
-      subHeding: 'SaaS, EdTech, FinTech, HealthTech, LegalTech, Creator Economy, and more',
-      subtitle1: 'Industries',
-      subtitle2: 'Served',
+      heading: '48-Hour Work Challenge',
+      subHeding: 'Complete a small task for Design or Development, based on your selection. ',
+      subtitle1: 'Execution > Perfection. We want people who can deliver, not talk.',
+      subtitle2: '3',
       hoverBg: '#b0ddcae6',
       textHover: '#000',
     },
     {
-      heading: '9+',
-      subHeding: 'Built for scale, speed, and seamless handoff to developers',
-      subtitle1: 'Years of',
-      subtitle2: 'Experience',
+      heading: 'Start Mentorship',
+      subHeding:
+        'If you pass, we begin our 6-week program  immediately, <span class="text-primary">even with a batch of 1.</span>',
+      subtitle1: 'If you miss deadlines, copy work, lie, or make excuses. you`re out.',
+      subtitle2: '4',
       hoverBg: '#f4e342e6',
       textHover: '#000',
     },
@@ -144,15 +147,15 @@ export class LandingComponent {
   refunds = [
     {
       range: '15–30 days',
-      text: 'Job offer or paid client in 15–30 days post-program → <span class="font-semibold text-green-700">100% refund</span>',
+      text: '<span class="font-semibold text-primary">100% refund</span>',
     },
     {
       range: '30–45 days',
-      text: 'Job/client within 30–45 days → <span class="font-semibold text-green-700">50% refund</span>',
+      text: '<span class="font-semibold text-primary">50% refund</span>',
     },
     {
       range: 'Up to 60 days',
-      text: 'Success within 60 days → <span class="font-semibold text-green-700">25% refund</span>. After 60 days, refund isn’t guaranteed, but support continues.',
+      text: '<span class="font-semibold text-primary">25% refund</span>',
     },
   ];
 

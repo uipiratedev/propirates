@@ -1,122 +1,4 @@
 <main class="min-h-screen bg-neutral-50 text-neutral-900 [color-scheme:light]">
-  <!-- Nav -->
-  <header
-    class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200"
-  >
-    <div class="mx-auto px-4 md:px-8 lg:px-11 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span
-          class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary font-black text-lg"
-        >
-          <img
-            src="https://res.cloudinary.com/damm9iwho/image/upload/v1762188181/logo_mwqce0.svg"
-            alt="ProPirates Logo"
-            priority
-          />
-        </span>
-        <span class="font-semibold tracking-tight text-3xl">ProPirates</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a
-          [href]="APPLY_LINK"
-          class="rounded-xl px-4 py-2 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
-        >
-          Apply Now
-        </a>
-        <a
-          href="/login"
-          class="rounded-2xl px-6 py-2 border border-neutral-300 hover:border-neutral-400 transition"
-        >
-          Login
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <!-- <section class="relative overflow-hidden">
-    <div
-      class="absolute inset-0 -z-10 bg-[radial-gradient(80%_60%_at_50%_-10%,#10b98122,transparent_60%)]"
-    ></div>
-    <div class="mx-auto px-4 py-16 md:py-24 grid md:grid-cols-12 gap-8 items-center">
-      <div class="md:col-span-7">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
-          Not a course. Not lectures.
-          <span class="text-primary">Only results.</span>
-        </h1>
-        <p class="mt-6 text-lg text-neutral-600 max-w-2xl">
-          Global, live mentorship for designers who learn by doing. Build a real SaaS product,
-          redesign an enterprise app, and ship a portfolio that looks experienced. No theory. No
-          hand-holding. No excuses.
-        </p>
-        <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-neutral-600">
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-3 py-1"
-          >
-            🌍 Global • English
-          </span>
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-3 py-1"
-          >
-            👥 1–12 seats (pilot)
-          </span>
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-3 py-1"
-          >
-            ⏱️ 6–8 weeks live
-          </span>
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-3 py-1"
-          >
-            💳 {{ PRICE }}
-          </span>
-          <span
-            class="inline-flex items-center gap-2 rounded-full bg-white border border-neutral-200 px-3 py-1"
-          >
-            📅 {{ START_DATE }}
-          </span>
-        </div>
-        <div class="mt-10 flex flex-wrap gap-4">
-          <a
-            [href]="APPLY_LINK"
-            class="rounded-2xl px-6 py-3 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
-          >
-            Apply Now
-          </a>
-          <a
-            href="/how-it-works"
-            class="rounded-2xl px-6 py-3 border border-neutral-300 hover:border-neutral-400 transition"
-          >
-            How it works
-          </a>
-        </div>
-        <p class="mt-6 text-sm text-neutral-500">
-          No DMs. No discovery calls. You apply → you execute → you grow.
-        </p>
-      </div>
-      <div class="md:col-span-5">
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-2xl">
-          <div class="text-sm text-neutral-500">Mentor</div>
-          <h3 class="mt-1 text-xl font-semibold">Vishal — Founder, UI Pirate</h3>
-          <p class="mt-3 text-neutral-600 text-sm leading-6">
-            8+ years building SaaS/UI systems. Trained 15–20 interns who went on to earn 7–12 LPA+
-            and senior roles. This mentorship formalizes the same results-first approach.
-          </p>
-          <ul class="mt-4 space-y-2 text-sm text-neutral-600">
-            <li>• Zero theory. Real deliverables.</li>
-            <li>• Brutally honest feedback.</li>
-            <li>• Portfolio that employers respect.</li>
-          </ul>
-          <a
-            [href]="APPLY_LINK"
-            class="mt-6 inline-flex rounded-xl px-4 py-2 bg-primary text-white font-semibold hover:bg-emerald-500 transition"
-          >
-            Start Application
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section
     class="relative bg-gradient-to-b from-[#f9fafb] via-[#f3f4f6] to-[#ffffff] overflow-hidden"
   >
@@ -605,13 +487,13 @@
       Simple, strict, and fair. We don’t select everyone, we select doers who can work under
       pressure, learn fast, and take responsibility for their output.
     </p>
-    <div class="grid grid-cols-2 gap-6 max-md:gap-4 lg:mt-40 max-lg:grid-cols-1">
+    <div class="grid grid-cols-2 gap-6 max-md:gap-4 lg:mt-40 max-md:mt-6 max-lg:grid-cols-1">
       <div
         *ngFor="let item of data; let i = index"
-        class="rounded-[40px] max-md:rounded-[20px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px] max-md:h-[250px] bg-[#E1EAEA] hover:ease-in-out transform transition-all duration-500"
+        class="rounded-[40px] max-md:rounded-[20px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px] max-md:h-[300px] bg-[#F2F2F2] hover:ease-in-out transform transition-all duration-500"
         [ngClass]="{ 'lg:-mt-32': i % 2 === 0, 'lg:mt-0': i % 2 !== 0 }"
         [ngStyle]="{
-          backgroundColor: hoveredIndex === i ? item.hoverBg : '#E1EAEA',
+          backgroundColor: hoveredIndex === i ? item.hoverBg : '#F2F2F2',
           color: hoveredIndex === i ? item.textHover : '#000'
         }"
         (mouseenter)="handleMouseEnter(i)"
@@ -619,25 +501,26 @@
       >
         <div>
           <p
-            class="text-8xl max-md:text-6xl mb-4 lg:pt-4 font-[500] max-md:font-[500] transition-transform duration-700 ease-out"
-            [ngClass]="{
-              'scale-110': hoveredIndex === i
-            }"
+            class="text-4xl max-md:text-2xl mb-4 lg:pt-4 font-[500] max-md:font-[500] transition-transform duration-700 ease-out"
           >
             {{ item.heading }}
           </p>
 
-          <p class="text-lg max-md:text-sm font-medium flex flex-row">
-            {{ item.subHeding }}
+          <p
+            class="text-base max-md:text-sm font-medium max-md:font-normal"
+            [innerHTML]="item.subHeding"
+          ></p>
+          <p class="text-base max-md:text-sm font-medium max-md:font-normal mt-4">
+            {{ item.subtitle1 }}
           </p>
 
           <p
-            class="text-3xl max-md:text-2xl font-semibold flex flex-row items-end justify-end pt-14 text-right max-md:pt-6 uppercase transition-all duration-300"
+            class="text-6xl max-md:text-4xl text-[#D6D6D6] font-semibold flex flex-row items-end justify-end pt-14 text-right max-md:pt-6 uppercase transition-all duration-300"
             [ngClass]="{
               'translate-y-1': hoveredIndex === i
             }"
           >
-            {{ item.subtitle1 }}<br />{{ item.subtitle2 }}
+            {{ item.subtitle2 }}
           </p>
         </div>
       </div>
@@ -728,7 +611,7 @@
 
     <!-- SECTION 2: PERFORMANCE REFUND -->
     <section class="mx-auto">
-      <h2 class="header mb-2">Performance <span class="text-primary">Refund</span></h2>
+      <h2 class="header mb-2">Performance <span class="text-primary">Refund Confidence</span></h2>
       <p class="text-gray-600 mb-8">
         We reward outcomes. Finish the mentorship and land paid work within 60 days — get your money
         back.
@@ -739,205 +622,130 @@
           *ngFor="let refund of refunds"
           class="border rounded-2xl p-6 bg-white hover:bg-green-50 hover:shadow-md transition-all"
         >
-          <h4 class="text-base font-bold mb-2 text-gray-800">{{ refund.range }}</h4>
-          <p class="text-sm text-gray-700" [innerHTML]="refund.text"></p>
+          <h4 class="text-base font-semibold mb-2 text-[#171717]">{{ refund.range }}</h4>
+          <p class="text-6xl text-gray-700" [innerHTML]="refund.text"></p>
         </div>
       </div>
+    </section>
+    <section class="bg-white py-4">
+      <div class="">
+        <!-- Top Policy Card -->
+        <div class="gradient-border mb-10">
+          <div
+            class="border rounded-2xl p-6 shadow-[0_6px_20px_rgba(0,0,0,0.04)] bg-white relative overflow-hidden"
+          >
+            <div class="absolute top-0 left-0 w-full h-[3px] rounded-t-2xl"></div>
 
-      <ul class="text-xs text-gray-600 space-y-1">
-        <li>
-          • Proof required: offer letter, paid invoice, client confirmation, or verifiable live
-          product revenue.
-        </li>
-        <li>• You must complete all program deliverables on time to be eligible.</li>
-      </ul>
+            <p class="text-gray-700 leading-relaxed mb-3">
+              Like the real world, We have a very
+              <span class="text-emerald-600 font-medium">Simple, Fair and Brutal</span> policy 😌
+            </p>
+
+            <p class="font-semibold text-gray-800 mb-1">
+              If you deliver and achieve,
+              <span class="text-emerald-600 font-bold">you don’t pay.</span>
+            </p>
+            <p class="font-semibold text-gray-800">
+              If you don’t, <span class="text-primaryfont-bold">you deserved to pay.</span>
+            </p>
+          </div>
+        </div>
+        <!-- Middle Description -->
+        <p class="text-gray-700 mb-8">
+          Different paths. One rule: If you succeed,
+          <span class="text-emerald-600 font-medium underline underline-offset-2"
+            >your money returns.</span
+          >
+        </p>
+
+        <!-- 4 Role Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+          <div
+            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
+          >
+            Professionals → <span class="text-emerald-600">job, hike, freelance</span>
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
+          >
+            Students → <span class="text-emerald-600">job, internship, client</span>
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
+          >
+            Dropouts & switchers →
+            <span class="text-emerald-600">paid work or product</span>
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
+          >
+            Entrepreneurs →
+            <span class="text-emerald-600">revenue or real users</span>
+          </div>
+        </div>
+
+        <!-- No Refund Section -->
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">
+          Who get’s <span class="text-primary font-bold">NO Refund?</span>
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who Disappears
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who wait for guidance
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who fake, or cheat
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who blame life, market, family…
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who refuse to put effort
+          </div>
+          <div
+            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
+          >
+            <span class="text-red-500 mr-1 text-lg">❌</span> Who expect luck to fix everything
+          </div>
+        </div>
+
+        <!-- Footer Line -->
+        <p class="text-sm text-gray-600">
+          For detailed information about refunds,
+          <a href="#" class="text-primary hover:text-emerald-500 font-medium">Click Here</a>
+        </p>
+      </div>
     </section>
   </div>
-
-  <!-- What you'll do -->
-  <!-- <section id="how" class="border-t border-neutral-200 bg-white/70">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl md:text-4xl font-bold">What you will do</h2>
-      <p class="mt-3 text-neutral-600 max-w-2xl">
-        You learn by shipping. Expect deadlines, revisions, and standards that mirror real product
-        teams.
-      </p>
-
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        @for (item of whatYouWillDo; track item.title) {
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="text-lg font-semibold">{{ item.title }}</h3>
-          <p class="mt-2 text-neutral-600 text-sm leading-6">
-            {{ item.desc }}
-          </p>
-        </div>
-        }
-      </div>
-
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="text-lg font-semibold">What you get</h3>
-          <ul class="mt-3 space-y-2 text-neutral-600 text-sm leading-6">
-            <li>• Live, async-first mentorship (no recordings).</li>
-            <li>• Weekly deliverables & honest critique.</li>
-            <li>• Templates for briefs, flows, case studies.</li>
-            <li>• Interview/referral guidance from alumni network.</li>
-            <li>• Access to a focused peer group (1–12 people).</li>
-          </ul>
-        </div>
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="text-lg font-semibold">What we do NOT do</h3>
-          <ul class="mt-3 space-y-2 text-neutral-600 text-sm leading-6">
-            <li>• No Figma basics, Photoshop/Canva classes.</li>
-            <li>• No theory lectures or hand-holding.</li>
-            <li>• No attendance certificates or placement guarantees.</li>
-            <li>• No endless calls. Your work speaks, not words.</li>
-            <li>• No excuses — missed deadlines lead to removal.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Selection flow -->
-  <!-- <section class="border-t border-neutral-200">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl md:text-4xl font-bold">How selection works</h2>
-      <ol class="mt-8 grid md:grid-cols-3 gap-6 text-sm text-neutral-600">
-        <li class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <span class="text-neutral-500">Step 1</span>
-          <h3 class="text-lg font-semibold mt-1">Apply (2–3 mins)</h3>
-          <p class="mt-2">Share who you are, your time, and any work. No DMs. No calls.</p>
-        </li>
-        <li class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <span class="text-neutral-500">Step 2</span>
-          <h3 class="text-lg font-semibold mt-1">48-hour task</h3>
-          <p class="mt-2">
-            Redesign one screen from any app. Submit Figma + 3 bullets. On time or out.
-          </p>
-        </li>
-        <li class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <span class="text-neutral-500">Step 3</span>
-          <h3 class="text-lg font-semibold mt-1">Start mentorship</h3>
-          <p class="mt-2">If you pass, we begin immediately — even with a batch of 1.</p>
-        </li>
-      </ol>
-
-      <div class="mt-10">
-        <a
-          [href]="APPLY_LINK"
-          class="inline-flex rounded-2xl px-6 py-3 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
-        >
-          Apply Now
-        </a>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- Refund policy -->
-  <!-- <section class="border-t border-neutral-200 bg-white/70">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-      <h2 class="text-3xl md:text-4xl font-bold">Performance Refund</h2>
-      <p class="mt-3 text-neutral-600 max-w-2xl">
-        We reward outcomes. Finish the mentorship and land paid work within 60 days — get your money
-        back.
-      </p>
-
-      <div class="mt-8 grid md:grid-cols-3 gap-6 text-sm">
-        @for (item of refundPolicy; track item.title) {
-        <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="font-semibold">{{ item.title }}</h3>
-          <p class="mt-2 text-neutral-600">
-            {{ item.desc.split('→')[0] }} →
-            <span class="font-semibold text-primary">{{ item.highlight }}</span>
-            @if (item.desc.includes('After 60 days')) { . After 60 days, refunds aren't guaranteed,
-            but support continues. }
-          </p>
-        </div>
-        }
-      </div>
-
-      <ul class="mt-8 text-sm text-neutral-500 space-y-2">
-        <li>
-          • Proof required: offer letter, paid invoice, client confirmation, or verifiable live
-          product revenue.
-        </li>
-        <li>• You must complete all program deliverables on time to be eligible.</li>
-      </ul>
-    </div>
-  </section> -->
-
   <!-- FAQ -->
   <section class="border-t border-neutral-200">
     <div class="mx-auto px-4 md:px-8 lg:px-11 py-16">
-      <h2 class="header">FAQ</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6 text-sm text-neutral-600">
+      <h2 class="header">Have any questions?</h2>
+      <p class="subtitle mt-3">
+        Simple, strict, and fair. We don’t select everyone, we select doers who can work under
+        pressure, learn fast, and take responsibility for their output.
+      </p>
+      <div class="mt-8 grid md:grid-cols-1 gap-6 text-sm text-neutral-600">
         @for (faq of faqs; track faq.q) {
         <div class="rounded-2xl border border-neutral-200 bg-white p-6">
-          <h3 class="font-semibold">{{ faq.q }}</h3>
-          <p class="mt-2">{{ faq.a }}</p>
+          <h3 class="font-semibold text-xl max-md:text-lg text-black">{{ faq.q }}</h3>
+          <p class="mt-2 subtitle text-[#525252]">{{ faq.a }}</p>
         </div>
         }
       </div>
-
-      <div class="mt-12">
-        <a
-          [href]="APPLY_LINK"
-          class="inline-flex rounded-2xl px-6 py-3 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
-        >
-          Apply Now
-        </a>
-        <p class="mt-4 text-neutral-500 text-sm">
-          No chats. No sales calls. Your work is your application.
-        </p>
-      </div>
     </div>
   </section>
-
-  <!-- Footer -->
-  <footer class="bg-primary text-white px-4 md:px-8 lg:px-11 py-12 font-['Plus_Jakarta_Sans']">
-    <div
-      class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 md:gap-0"
-    >
-      <!-- Left Section -->
-      <div class="max-w-2xl space-y-4">
-        <h2 class="text-3xl md:text-4xl font-extrabold leading-snug">
-          ProPirates is not a course.<br />
-          It is a talent accelerator.
-        </h2>
-        <p class="text-white/90 text-base md:text-lg leading-relaxed">
-          We don’t make people learn to earn money. We make them the kind of people who deserve
-          money. If you’re ready, apply. If you’re afraid, don’t.
-        </p>
-      </div>
-
-      <!-- Right Section (Buttons) -->
-      <div class="flex flex-col gap-4 items-start md:items-end">
-        <button
-          class="bg-white text-black font-semibold text-lg py-3 px-6 rounded-2xl shadow hover:shadow-lg transition-all flex items-center gap-2"
-        >
-          🚀 Help Me Grow
-        </button>
-
-        <button
-          class="bg-white/10 text-white border border-white/20 font-medium text-lg py-3 px-6 rounded-2xl backdrop-blur-sm hover:bg-white/20 transition-all flex items-center gap-2"
-        >
-          🫣 Help me decide
-        </button>
-      </div>
-    </div>
-
-    <!-- Divider -->
-    <div
-      class="border-t border-white/30 mt-16 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/80"
-    >
-      <p>© 2025 UI Pirate. Work. Don't talk.</p>
-
-      <div class="flex gap-6 mt-4 md:mt-0">
-        <a href="#" class="hover:text-white">Apply</a>
-        <a href="#" class="hover:text-white">How it works</a>
-        <a href="#" class="hover:text-white">Terms</a>
-      </div>
-    </div>
-  </footer>
 </main>

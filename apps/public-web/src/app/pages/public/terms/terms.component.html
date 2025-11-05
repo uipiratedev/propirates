@@ -1,34 +1,4 @@
 <main class="min-h-screen bg-neutral-50 text-neutral-900 [color-scheme:light] flex flex-col">
-  <!-- Header -->
-  <header
-    class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b border-neutral-200"
-  >
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-3">
-        <span
-          class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-neutral-100 font-black text-lg"
-        >
-          ⚓
-        </span>
-        <span class="font-semibold tracking-tight">UI Pirate — Elite Mentorship</span>
-      </div>
-      <div class="flex items-center gap-4">
-        <a
-          routerLink="/"
-          class="rounded-2xl px-6 py-2 border border-neutral-300 hover:border-neutral-400 transition"
-        >
-          Home
-        </a>
-        <a
-          routerLink="/apply-now"
-          class="rounded-2xl px-6 py-2 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
-        >
-          Apply Now
-        </a>
-      </div>
-    </div>
-  </header>
-
   <!-- Terms of Service Section -->
   <section class="flex-grow max-w-4xl mx-auto px-4 py-16">
     <h1 class="text-4xl font-extrabold mb-6">Terms & Conditions</h1>
@@ -73,18 +43,4 @@
 
     <p class="mt-10 text-sm text-neutral-500">Last updated: {{ currentYear }}</p>
   </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-neutral-200 mt-16">
-    <div
-      class="max-w-6xl mx-auto px-4 py-10 text-sm text-neutral-500 flex flex-wrap items-center justify-between gap-4"
-    >
-      <p>© {{ currentYear }} UI Pirate. Work. Don’t talk.</p>
-      <div class="flex items-center gap-4">
-        <a href="/apply-now" class="hover:text-neutral-700"> Apply </a>
-        <a href="/how-it-works" class="hover:text-neutral-700"> How it works </a>
-        <a href="/terms" class="hover:text-neutral-700 font-semibold"> Terms </a>
-      </div>
-    </div>
-  </footer>
 </main>
