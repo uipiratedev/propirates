@@ -9,10 +9,10 @@
     @apply bg-white text-[#525252] text-sm px-5 py-2 rounded-full border-2 border-[#E5E5E5];
   }
   .bg-badge {
-    @apply inline-block bg-[#D1FAED] text-primary text-sm font-semibold px-3 py-1.5 rounded-lg uppercase tracking-wide;
+    @apply inline-block bg-[#D1FAED] text-primary text-sm max-md:text-xs font-semibold px-3 py-1.5 rounded-lg uppercase tracking-wide;
   }
   .header {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-2xl md:text-4xl font-bold;
   }
   .subtitle {
     @apply text-[#777777] text-base md:text-lg leading-relaxed max-w-3xl;
@@ -22,13 +22,15 @@
   }
 
   .bg-btn {
-    @apply bg-primary hover:bg-emerald-700 text-white font-semibold text-base px-8 py-3 rounded-2xl shadow-sm transition-all duration-200;
+    @apply bg-primary hover:bg-emerald-700 text-white font-semibold text-base max-md:text-sm px-8 py-3 rounded-2xl max-md:rounded-xl shadow-sm transition-all duration-200;
   }
 
   .gradent-border {
     @apply p-[2px] bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-500 hover:from-emerald-500 hover:via-blue-500 hover:to-purple-600;
   }
-
+  .border-card {
+    @apply border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300 gradient-border-hover;
+  }
   .box-shadow {
     border-bottom-width: 1px;
     border-color: #ffffff;
@@ -45,7 +47,7 @@
   .gradient-border {
     position: relative;
     border-radius: 1rem; /* same as rounded-2xl */
-    padding: 2px;
+    padding: 1px;
     background: linear-gradient(
       89.9deg,
       #f7de04 4.58%,
@@ -128,4 +130,23 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* mobile view */
+@media (max-width: 768px) {
+  .gradient-border-hover {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(
+          89.9deg,
+          #f7de04 4.58%,
+          #11c781 27.52%,
+          #0cc784 27.53%,
+          #05a2fb 48.18%,
+          #5e72e4 72.05%,
+          #f04800 92.7%
+        )
+        border-box;
+    transition: all 0.4s ease;
+  }
 }

@@ -3,15 +3,15 @@
     class="relative bg-gradient-to-b from-[#f9fafb] via-[#f3f4f6] to-[#ffffff] overflow-hidden"
   >
     <div
-      class="mx-auto px-4 md:px-8 lg:px-11 py-16 grid md:grid-cols-2 gap-0 items-start relative z-10"
+      class="mx-auto px-4 md:px-8 lg:px-11 py-16 max-md:py-8 grid md:grid-cols-2 gap-0 items-start relative z-10"
     >
       <!-- LEFT CONTENT -->
-      <div class="space-y-8">
+      <div class="space-y-8 max-md:space-y-4">
         <!-- Badge -->
         <span class="bg-badge"> 6–8 Week Talent Accelerator </span>
 
         <!-- Heading -->
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
           Not a course. Not lectures.
           <span class="text-primary">Only results.</span>
         </h1>
@@ -45,7 +45,7 @@
       </div>
 
       <!-- RIGHT CARD -->
-      <div class="flex flex-row items-center justify-center h-full w-full">
+      <div class="flex flex-row items-center justify-center md:h-full w-full max-md:mt-4">
         <div class="gradient-border w-full md:w-3/4 mx-auto md:mx-0">
           <div
             class="bg-white rounded-2xl h-full w-full p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
@@ -78,8 +78,8 @@
     </div>
 
     <!-- QUOTE SECTION -->
-    <div class="max-w-6xl mx-auto text-center mt-12 pb-10 pt-10">
-      <div class="max-md:pt-20">
+    <div class="max-w-6xl mx-auto text-center mt-12 pb-10 pt-10 max-md:mt-0 max-md:pt-0">
+      <div class="max-md:pt-10">
         <div class="relative text-center max-w-6xl mx-auto px-4">
           <!-- Left quote icon -->
           <img
@@ -90,7 +90,7 @@
 
           <!-- Text -->
           <p
-            class="text-2xl md:text-4xl font-normal text-black leading-snug italic pl-8 pr-12 max-md:pr-6"
+            class="text-xl md:text-4xl font-normal text-black leading-snug italic pl-8 pr-12 max-md:pr-6"
           >
             Stop learning only theory. <br />
             <span class="text-primary"> Start working like a professional. </span>
@@ -122,12 +122,12 @@
     </div>
 
     <div class="mx-auto pb-6">
-      <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6">
+      <div class="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-6 max-md:gap-4">
         @for (item of whoIsThisFor; track item.title1) {
         <div
-          class="gradient-border-hover border border-neutral-200 hover:bg-white/50 bg-white p-6 rounded-2xl"
+          class="gradient-border-hover border border-neutral-200 hover:bg-white/50 bg-white p-6 max-md:p-4 rounded-2xl"
         >
-          <h3 class="text-2xl font-semibold">
+          <h3 class="text-2xl max-md:text-lg max-lg:text-xl font-semibold">
             <span class="text-primary">{{ item.title1 }}</span> {{ item.title2 }}
           </h3>
         </div>
@@ -139,15 +139,15 @@
   </section>
 
   <!-- Why do you need this -->
-  <section class="bg-white/70 px-4 md:px-8 lg:px-11">
-    <div class="mx-auto pt-16 pb-7">
+  <section class="bg-white/70 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
+    <div class="mx-auto pb-7">
       <h2 class="header">Why do you <span class="text-primary"> need this</span></h2>
       <p class="mt-3 subtitle">Because the industry doesn’t pay for certificates or theory.</p>
     </div>
     <div class="h-full w-full">
       <div class="gradient-border rounded-3xl w-full mx-auto md:mx-0">
         <div
-          class="bg-white rounded-3xl h-full w-full p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
+          class="bg-white rounded-3xl h-full w-full p-8 max-md:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
         >
           <h2 class="text-xl font-semibold text-gray-900 mb-4">
             Skill is not the problem. <span class="text-primary"> Execution is.</span>
@@ -168,7 +168,7 @@
   </section>
 
   <!-- What you will do. -->
-  <section class="min-h-screen bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16">
+  <section class="min-h-screen bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
     <div class="mb-10">
       <span class="bg-badge">Choose your path. Master one skill</span>
       <h1 class="header mt-2">What you <span class="text-primary">will do.</span></h1>
@@ -248,7 +248,7 @@
         <p class="mt-2 text-xs text-gray-600">
           <strong class="subtitle text-black font-medium">No Dribbble copying. No templates.</strong
           ><br />
-          <span class="text-green-700 font-medium subtitle"
+          <span class="text-primary font-medium subtitle"
             >Real screens. Real logic. Real product thinking.</span
           >
         </p>
@@ -323,7 +323,7 @@
 
         <p class="mt-2 text-xs text-gray-600">
           <strong class="subtitle text-black">No tutorials. No toy projects.</strong><br />
-          <span class="text-green-700 subtitle">Real proud work, the kind that can go live.</span>
+          <span class="text-primary subtitle">Real proud work, the kind that can go live.</span>
         </p>
 
         <button class="mt-5 bg-btn">Apply For Development Track</button>
@@ -388,7 +388,7 @@
   </section>
 
   <!-- What is the outcome -->
-  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16">
+  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
     <!-- OUTCOME SECTION -->
     <section class="mx-auto mb-16">
       <h2 class="header mb-2">What is the <span class="text-primary">outcome</span></h2>
@@ -405,9 +405,12 @@
       <div class="grid md:grid-cols-3 gap-4">
         <div
           *ngFor="let item of outcomes"
-          class="gradient-border-hover border border-neutral-200 bg-white p-6 rounded-2xl"
+          class="gradient-border-hover border border-neutral-200 bg-white p-6 max-md:p-4 rounded-2xl"
         >
-          <span [innerHTML]="item" class="text-2xl font-semibold"></span>
+          <span
+            [innerHTML]="item"
+            class="text-2xl max-md:text-lg max-lg:text-xl font-semibold"
+          ></span>
         </div>
       </div>
     </section>
@@ -449,7 +452,7 @@
   </div>
 
   <!-- Why Working Professionals Join -->
-  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16">
+  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
     <!-- SECTION 1: WHY PROFESSIONALS JOIN -->
     <section class="mx-auto mb-16">
       <h2 class="header mb-2">Why Working <span class="text-primary">Professionals Join</span></h2>
@@ -463,14 +466,14 @@
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div
           *ngFor="let reason of joinReasons"
-          class="border border-black/10 gradient-border-hover rounded-2xl p-5 text-2xl font-semibold shadow-sm bg-white hover:bg-green-50 hover:shadow-md transition-all cursor-pointer"
+          class="border border-black/10 gradient-border-hover rounded-2xl p-5 max-md:p-4 text-2xl max-md:text-lg max-lg:text-xl font-semibold shadow-sm bg-white hover:bg-green-50 hover:shadow-md transition-all cursor-pointer"
           [innerHTML]="reason"
         ></div>
       </div>
 
       <p class="mt-6 text-sm text-gray-700">
         This is where <span class="font-semibold">“average”</span> developers and designers become
-        <span class="text-green-700 font-semibold underline">dangerously capable.</span>
+        <span class="text-primary font-semibold underline">dangerously capable.</span>
       </p>
     </section>
 
@@ -482,7 +485,7 @@
       </ul>
       <p class="mt-4 text-sm text-gray-700">
         This is not for everyone. It is only for
-        <span class="text-green-700 font-semibold underline">people who want to earn respect</span>
+        <span class="text-primary font-semibold underline">people who want to earn respect</span>
         through real work.
       </p>
     </section>
@@ -495,14 +498,14 @@
       </ul>
       <p class="mt-4 text-sm text-gray-700">
         This is not for everyone. It is only for
-        <span class="text-green-700 font-semibold underline">people who want to earn respect</span>
+        <span class="text-primary font-semibold underline">people who want to earn respect</span>
         through real work.
       </p>
     </section>
   </div>
 
   <!--How selection works?  -->
-  <div class="px-4 md:px-8 lg:px-11 pb-20 max-md:pb-12 max-md:pt-12 pt-16">
+  <div class="px-4 md:px-8 lg:px-11 pb-20 max-md:pb-12 pt-16 max-md:pt-10">
     <h2 class="header mb-4">How selection <span class="text-primary">works</span></h2>
     <p class="subtitle">
       Simple, strict, and fair. We don’t select everyone, we select doers who can work under
@@ -548,7 +551,7 @@
     </div>
   </div>
   <!-- How much does it cost? -->
-  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16">
+  <div class="bg-white text-gray-900 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
     <!-- SECTION 1: COST -->
     <section class="mx-auto mb-16">
       <h2 class="header mb-4">How much does it <span class="text-primary">cost?</span></h2>
@@ -763,25 +766,17 @@
 
         <!-- 4 Role Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          <div
-            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
-          >
+          <div class="border-card text-lg max-md:text-base font-semibold">
             Professionals → <span class="text-emerald-600">job, hike, freelance</span>
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
-          >
+          <div class="border-card text-lg max-md:text-base font-semibold">
             Students → <span class="text-emerald-600">job, internship, client</span>
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
-          >
+          <div class="border-card text-lg max-md:text-base font-semibold">
             Dropouts & switchers →
             <span class="text-emerald-600">paid work or product</span>
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 font-semibold bg-white hover:shadow-md transition-all duration-300"
-          >
+          <div class="border-card text-lg max-md:text-base font-semibold">
             Entrepreneurs →
             <span class="text-emerald-600">revenue or real users</span>
           </div>
@@ -793,34 +788,22 @@
         </h3>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who Disappears
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who wait for guidance
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who fake, or cheat
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who blame life, market, family…
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who refuse to put effort
           </div>
-          <div
-            class="border border-gray-200 rounded-xl p-4 bg-white hover:bg-gray-50 transition-all duration-300"
-          >
+          <div class="border-card">
             <span class="text-red-500 mr-1 text-lg">❌</span> Who expect luck to fix everything
           </div>
         </div>
