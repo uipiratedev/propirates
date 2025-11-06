@@ -41,6 +41,14 @@ export const routes: Routes = [
         data: { featureTag: 'Public/HowItWorks' },
       },
       {
+        path: 'how-refund-works',
+        loadComponent: () =>
+          import('./pages/public/how-refund-works/how-refund-works.component').then(
+            (m) => m.HowRefundWorksComponent
+          ),
+        data: { featureTag: 'Public/HowRefundWorks' },
+      },
+      {
         path: 'start-application',
         loadComponent: () =>
           import('./pages/public/start-application/start-application.component').then(

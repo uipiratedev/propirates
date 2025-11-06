@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { Modal } from '../../../shared/components/modal';
 
 interface CardData {
@@ -15,7 +14,7 @@ interface CardData {
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, RouterLink, Modal],
+  imports: [CommonModule, Modal],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })
