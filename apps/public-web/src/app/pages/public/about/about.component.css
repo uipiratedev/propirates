@@ -1,0 +1,274 @@
+/* About Component Styles */
+
+/* Ensure proper component rendering */
+:host {
+  display: block;
+  width: 100%;
+}
+
+/* Screen reader only content for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced hover effects for statistics cards */
+.stat-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient border animation on hover */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-border:hover {
+  animation: gradientShift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Value cards hover effect */
+article:hover {
+  transform: translateY(-2px);
+}
+
+/* Process step cards */
+.process-step {
+  position: relative;
+  overflow: hidden;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #f7de04 0%,
+    #11c781 25%,
+    #05a2fb 50%,
+    #5e72e4 75%,
+    #f04800 100%
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover::before {
+  transform: scaleX(1);
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus,
+button:focus {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button,
+.gradient-border-hover {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced CTA button hover effect */
+.bg-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(5, 150, 105, 0.3);
+}
+
+/* Icon animation on hover */
+@keyframes iconBounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+.bg-btn:hover span {
+  animation: iconBounce 0.6s ease infinite;
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Print styles for better printing */
+@media print {
+  .bg-btn,
+  nav,
+  footer {
+    display: none;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here if needed */
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Loading state styles */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Skeleton loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #f0f0f0 4%, #e0e0e0 25%, #f0f0f0 36%);
+  background-size: 1000px 100%;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .gradient-border-hover {
+    border-width: 2px;
+  }
+
+  .text-primary {
+    font-weight: 700;
+  }
+}
+
+/* Ensure proper spacing for long content */
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Improve readability */
+article p,
+section p {
+  max-width: 75ch;
+}
+
+/* Badge animation */
+.bg-badge {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation for grid items */
+.grid > * {
+  animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.grid > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.grid > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.grid > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.grid > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Ensure proper contrast for text */
+.text-neutral-600 {
+  color: #525252;
+}
+
+/* Improve link visibility */
+a:not(.bg-btn):not([class*='border']) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.3s ease;
+}
+
+a:not(.bg-btn):not([class*='border']):hover {
+  text-decoration-color: currentColor;
+}
+
