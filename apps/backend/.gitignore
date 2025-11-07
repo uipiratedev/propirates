@@ -1,0 +1,20 @@
+# Python
+app/backend/__pycache__/
+app/backend/*.py[cod]
+app/backend/*.pyo
+app/backend/*.pyd
+app/backend/*.so
+app/backend/*.egg-info/
+app/backend/.dist/
+app/backend/.pytest_cache/
+app/backend/.coverage
+app/backend/htmlcov/
+app/backend/.mypy_cache/
+app/backend/.venv/
+
+# Env
+app/backend/.env
+app/backend/venv/
+
+# Misc
+app/backend/.DS_Store

@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/backend/app",
+  "tags": ["scope:public", "type:api"],
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend",
+        "command": "python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/backend",
+        "command": "pytest -q"
+      }
+    }
+  }
+}
+
