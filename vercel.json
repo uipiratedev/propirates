@@ -6,8 +6,8 @@
   "installCommand": "npm install --legacy-peer-deps",
   "framework": null,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" },
+    { "source": "/api/(.*)", "destination": "/api/$1" }
   ],
   "headers": [
     {
@@ -26,7 +26,7 @@
     }
   ],
   "functions": {
-    "api/**/*.py": { "includeFiles": "apps/backend/**" }
+    "api/**/*.py": {"includeFiles": "apps/backend/**"}
   }
 }
 
