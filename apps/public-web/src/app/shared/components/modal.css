@@ -1,0 +1,75 @@
+/* Modal Component Styles */
+
+/* Ensure modal appears above other content */
+:host {
+  display: contents;
+}
+
+/* Smooth transitions for modal animations */
+.modal-enter {
+  animation: modalFadeIn 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-leave {
+  animation: modalFadeOut 150ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+/* Backdrop blur effect for modern browsers */
+@supports (backdrop-filter: blur(4px)) {
+  .modal-backdrop {
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Focus visible styles for accessibility */
+button:focus-visible {
+  outline: 2px solid theme('colors.primary');
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for modal content */
+.modal-body {
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+/* Custom scrollbar for modal content */
+.modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
