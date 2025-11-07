@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Modal } from '../../../shared/components/modal';
+import { TiltedCardDirective } from '../../../shared/directives/tilted-card.directive';
 
 interface CardData {
   heading: string;
@@ -14,7 +15,7 @@ interface CardData {
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, Modal],
+  imports: [CommonModule, Modal, TiltedCardDirective],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })

@@ -46,7 +46,15 @@
 
       <!-- RIGHT CARD -->
       <div class="flex flex-row items-center justify-center md:h-full w-full max-md:mt-4">
-        <div class="gradient-border w-full md:w-3/4 mx-auto md:mx-0">
+        <div
+          class="gradient-border w-full md:w-3/4 mx-auto md:mx-0"
+          appTiltedCard
+          [tiltMaxAngle]="10"
+          [tiltScale]="1.03"
+          [tiltSpeed]="400"
+          [tiltGlare]="true"
+          [tiltGlareMaxOpacity]="0.2"
+        >
           <div
             class="bg-white rounded-2xl h-full w-full p-8 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
           >
@@ -180,6 +188,12 @@
     <div class="grid md:grid-cols-2 gap-6 mx-auto">
       <!-- UI/UX Design Track -->
       <div
+        appTiltedCard
+        [tiltMaxAngle]="10"
+        [tiltScale]="1.03"
+        [tiltSpeed]="400"
+        [tiltGlare]="true"
+        [tiltGlareMaxOpacity]="0.2"
         (click)="selectTrack('design')"
         class="rounded-2xl border p-6 cursor-pointer transition-all duration-300"
         [class.bg-green-50]="selectedTrack === 'design'"
@@ -258,6 +272,12 @@
 
       <!-- UI Development Track -->
       <div
+        appTiltedCard
+        [tiltMaxAngle]="10"
+        [tiltScale]="1.03"
+        [tiltSpeed]="400"
+        [tiltGlare]="true"
+        [tiltGlareMaxOpacity]="0.2"
         (click)="selectTrack('development')"
         class="rounded-2xl border p-6 cursor-pointer transition-all duration-300"
         [class.bg-green-50]="selectedTrack === 'development'"
@@ -514,6 +534,12 @@
     <div class="grid grid-cols-2 gap-6 max-md:gap-4 lg:mt-40 max-md:mt-6 max-lg:grid-cols-1">
       <div
         *ngFor="let item of data; let i = index"
+        appTiltedCard
+        [tiltMaxAngle]="8"
+        [tiltScale]="1.02"
+        [tiltSpeed]="300"
+        [tiltGlare]="true"
+        [tiltGlareMaxOpacity]="0.15"
         class="rounded-[40px] max-md:rounded-[20px] pt-4 pb-12 px-12 max-md:px-6 w-full h-[350px] max-md:h-[300px] bg-[#F2F2F2] hover:ease-in-out transform transition-all duration-500"
         [ngClass]="{ 'lg:-mt-32': i % 2 === 0, 'lg:mt-0': i % 2 !== 0 }"
         [ngStyle]="{
@@ -563,6 +589,12 @@
         <div class="grid md:grid-cols-2 gap-8 max-md:gap-6">
           <!-- FREE FEEDBACK CARD -->
           <div
+            appTiltedCard
+            [tiltMaxAngle]="12"
+            [tiltScale]="1.04"
+            [tiltSpeed]="350"
+            [tiltGlare]="true"
+            [tiltGlareMaxOpacity]="0.25"
             class="gradient-border-hover border border-neutral-200 rounded-3xl p-10 max-md:p-6 bg-white"
           >
             <div
@@ -622,6 +654,12 @@
 
           <!-- PAID CALL CARD -->
           <div
+            appTiltedCard
+            [tiltMaxAngle]="12"
+            [tiltScale]="1.04"
+            [tiltSpeed]="350"
+            [tiltGlare]="true"
+            [tiltGlareMaxOpacity]="0.25"
             class="bg-primary hover:bg-primary text-white rounded-3xl p-10 max-md:p-6 relative overflow-hidden"
           >
             <div class="relative z-10">
