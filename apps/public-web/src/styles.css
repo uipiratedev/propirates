@@ -15,7 +15,7 @@
     @apply text-2xl md:text-4xl font-bold;
   }
   .subtitle {
-    @apply text-[#777777] text-base md:text-lg leading-relaxed max-w-3xl;
+    @apply text-[#777777] text-base md:text-lg leading-relaxed;
   }
   .base-subtitle {
     @apply text-[#777777] text-base leading-relaxed max-w-3xl;

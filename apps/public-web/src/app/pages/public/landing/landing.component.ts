@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Modal } from '../../../shared/components/modal';
+import { TiltedCardDirective } from '../../../shared/directives/tilted-card.directive';
 
 interface CardData {
+  icon: string;
   heading: string;
   subHeding: string;
   subtitle1: string;
@@ -14,7 +16,7 @@ interface CardData {
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [CommonModule, Modal],
+  imports: [CommonModule, Modal, TiltedCardDirective],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })
@@ -33,26 +35,32 @@ export class LandingComponent {
 
   readonly whoIsThisFor = [
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773415/laetlkfvkjqqvaodzftm.svg',
       title1: 'Students',
       title2: 'learning design or development',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773416/y6x7cftjdz7qijqm3ucb.svg',
       title1: 'Working professionals',
       title2: 'who need direction or stuck in slow growth',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773415/aiuqb0muluemjxc7whcs.svg',
       title1: 'Designers',
       title2: 'who want to look experienced',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773415/jvlbsvaejdc3qynqvbcv.svg',
       title1: 'Developers',
       title2: 'who can code, but can’t ship polished UI',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773383/wjbu2cdwd1mkmsstkebd.svg',
       title1: 'Freelancers  and agencies',
       title2: 'who want bigger clients & higher pricing',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/yggbzca6z685vnulzvdu.svg',
       title1: 'Career switchers',
       title2: 'with discipline and hunger',
     },
@@ -67,32 +75,92 @@ export class LandingComponent {
 
   // What is the outcome
   outcomes = [
-    'A portfolio that looks <span class="text-primary font-semibold">senior and experienced</span>',
-    '<span class="text-primary font-semibold">Confidence to work </span> with clients or teams',
-    'Practical and user-centric <span class="text-primary font-semibold">product mindset</span>',
-    'Real-world <span class="text-primary font-semibold">output</span> (not classroom theory)',
-    'Work discipline, structure, clarity and <span class="text-primary font-semibold">decision–making</span>',
-    '<span class="text-primary font-semibold">Independent and accountable</span> – no spoon feeding',
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773780/kaeiaoz2kaplljnknmmp.svg',
+      title:
+        'A portfolio that looks <span class="text-primary font-semibold">senior and experienced</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/yggbzca6z685vnulzvdu.svg',
+      title:
+        '<span class="text-primary font-semibold">Confidence to work </span> with clients or teams',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773779/gog24by3qftocszhk6rj.svg',
+      title:
+        'Practical and user-centric <span class="text-primary font-semibold">product mindset</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773779/dqt33bkxkc5mtjswrtwj.svg',
+      title:
+        'Real-world <span class="text-primary font-semibold">output</span> (not classroom theory)',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773779/%EF%B8%8F_lswtyg.svg',
+      title:
+        'Work discipline, structure, clarity and <span class="text-primary font-semibold">decision–making</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773779/yhktowdgmnw4e84014lp.svg',
+      title:
+        '<span class="text-primary font-semibold">Independent and accountable</span> – no spoon feeding',
+    },
   ];
 
   // Section 1 - Reasons professionals join
   joinReasons = [
-    'Get <span class="text-primary font-semibold">Unstuck</span>',
-    'Upgrade <span class="text-primary font-semibold">Portfolio</span>',
-    'Learn <span class="text-primary font-semibold">Clean Delivery</span>',
-    'Handle Real <span class="text-primary font-semibold">Teamwork</span>',
-    'Build <span class="text-primary font-semibold">Confidence</span>',
-    'Boost <span class="text-primary font-semibold">Growth</span>',
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774306/g2q1szkcikofd0gydwsr.svg',
+      title: 'Get <span class="text-primary font-semibold">Unstuck</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774305/%EF%B8%8F_vtcpcm.svg',
+      title: 'Upgrade <span class="text-primary font-semibold">Portfolio</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774004/mw93u8vfdt96y2e0uudq.svg',
+      title: 'Learn <span class="text-primary font-semibold">Clean Delivery</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774004/wgemwpaqr0hqoqsgew5x.svg',
+      title: 'Handle Real <span class="text-primary font-semibold">Teamwork</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/yggbzca6z685vnulzvdu.svg',
+      title: 'Build <span class="text-primary font-semibold">Confidence</span>',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774003/eoklxdpytvl6wlafxybh.svg',
+      title: 'Boost <span class="text-primary font-semibold">Growth</span>',
+    },
   ];
 
   // Section 2 - Success stories / Do not apply list
   dontApplyReasons = [
-    'You want comfort',
-    'You need reminders',
-    'You expect hand-holding',
-    'You only want certificates',
-    'You hate feedback',
-    'You can’t handle pressure',
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773375/10ffdd0e58307284365f9f9bcdd4ba8e948c2094_lkrkqp.gif',
+      title: '❌ You want comfort',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/26a49815e273a9ea821bb815ac1ad2502e29ad18_ebahpx.gif',
+      title: '❌You need reminders',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773383/97253c168825c960eb200723705f860ae12d17b2_palx7j.gif',
+      title: '❌ You expect hand-holding',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773376/7af9ef60eba8ac400ed0e05c327711194468cda9_kwd22d.gif',
+      title: '❌ You only want certificates',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773380/f9652f51f43b9a502e15b99f8e2612544fc2217b_edrlis.gif',
+      title: '❌ You hate feedback',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773378/3fd84aad66e9427ae15d01c374dcc4e931841d25_ywdftt.gif',
+      title: '❌ You can’t handle pressure',
+    },
   ];
 
   // Section 3 - Do not apply if
@@ -100,6 +168,7 @@ export class LandingComponent {
 
   data: CardData[] = [
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774003/%EF%B8%8F_bod0mh.svg',
       heading: 'Quick Screening (1–2 minutes)',
       subHeding:
         'You fill a short form. Choose your track (UI/UX Design or UI Development), tell us who you are, and   <span class="text-primary">why you want this',
@@ -109,6 +178,7 @@ export class LandingComponent {
       textHover: '#fff',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/yggbzca6z685vnulzvdu.svg',
       heading: 'Mindset & Ambition Round',
       subHeding:
         'We look at discipline, honesty, commitment, learning attitude, and clarity of goal.  to understand  <span class="text-primary">how serious you are.</span>',
@@ -118,6 +188,7 @@ export class LandingComponent {
       textHover: '#000',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774003/wftlblbzpauvlfuhfrhl.svg',
       heading: '48-Hour Work Challenge',
       subHeding: 'Complete a small task for Design or Development, based on your selection. ',
       subtitle1: 'Execution > Perfection. We want people who can deliver, not talk.',
@@ -126,6 +197,7 @@ export class LandingComponent {
       textHover: '#000',
     },
     {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762774002/btve8acwg9zbncy5vv7b.svg',
       heading: 'Start Mentorship',
       subHeding:
         'If you pass, we begin our 6-week program  immediately, <span class="text-primary">even with a batch of 1.</span>',
