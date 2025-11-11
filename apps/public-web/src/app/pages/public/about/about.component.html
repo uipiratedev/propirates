@@ -55,15 +55,15 @@
     class="bg-white py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="mission-heading"
   >
-    <div class="mx-auto">
+    <div class="mx-auto bg-[#D1FAED] p-6 max-md:p-4 rounded-3xl">
+      <span class="bg-badge bg-[#91F4D6]">OUR MISSION</span>
+      <h2 id="mission-heading" class="header mt-4 mb-4 md:w-1/2">
+        Building the Next Generation of
+        <span class="text-primary">Design Leaders</span>
+      </h2>
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div>
-          <span class="bg-badge">OUR MISSION</span>
-          <h2 id="mission-heading" class="header mt-4 mb-6">
-            Building the Next Generation of
-            <span class="text-primary">Design Leaders</span>
-          </h2>
           <div class="space-y-4 base-subtitle">
             <p>
               We started Propirates because we saw too many talented designers stuck in tutorial
@@ -81,19 +81,25 @@
         </div>
 
         <!-- Right Content - Visual Element -->
-        <div class="relative gradient-border">
+        <div class="relative gradient-border justify-end content-end">
           <div
             class="rounded-2xl p-8 bg-white shadow-lg"
             role="complementary"
             aria-label="Program highlights"
           >
             <div class="space-y-6">
-              <div class="flex items-start gap-4">
+              <div class="flex max-md:flex-col items-start gap-4">
                 <div
-                  class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                   aria-hidden="true"
                 >
-                  <span class="text-2xl">🎯</span>
+                  <span class="text-2xl">
+                    <img
+                      src="https://res.cloudinary.com/damm9iwho/image/upload/v1762773780/kaeiaoz2kaplljnknmmp.svg"
+                      alt=""
+                      class="w-8 h-8"
+                    />
+                  </span>
                 </div>
                 <div>
                   <h3 class="font-bold text-lg mb-1">Real Projects Only</h3>
@@ -103,9 +109,9 @@
                 </div>
               </div>
 
-              <div class="flex items-start gap-4">
+              <div class="flex items-start max-md:flex-col gap-4">
                 <div
-                  class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                   aria-hidden="true"
                 >
                   <span class="text-2xl">⚡</span>
@@ -118,9 +124,9 @@
                 </div>
               </div>
 
-              <div class="flex items-start gap-4">
+              <div class="flex max-md:flex-col items-start gap-4">
                 <div
-                  class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0"
+                  class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                   aria-hidden="true"
                 >
                   <span class="text-2xl">🚀</span>
@@ -159,7 +165,9 @@
           class="gradient-border-hover border border-neutral-200 rounded-2xl p-8 max-md:p-6 bg-white hover:shadow-lg transition-all duration-300"
           [attr.aria-label]="value.title"
         >
-          <div class="text-5xl mb-4" aria-hidden="true">{{ value.icon }}</div>
+          <div class="text-5xl mb-4" aria-hidden="true">
+            <img [src]="value.icon" alt="icon" class="w-12 h-12 mb-4 rounded-lg" />
+          </div>
           <h3 class="text-2xl font-bold mb-3">{{ value.title }}</h3>
           <p class="text-neutral-600 leading-relaxed">{{ value.description }}</p>
         </article>
@@ -188,10 +196,12 @@
           [attr.aria-label]="feature.title"
         >
           <div
-            class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4"
+            class="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
             aria-hidden="true"
           >
-            <span class="text-3xl">{{ feature.icon }}</span>
+            <!-- <span class="text-3xl">{{ feature.icon }}</span>
+              -->
+            <img [src]="feature.icon" alt="icon" class="w-12 h-12 mb-4 rounded-lg" />
           </div>
           <h3 class="text-xl font-bold mb-3">{{ feature.title }}</h3>
           <p class="text-neutral-600 leading-relaxed">{{ feature.description }}</p>

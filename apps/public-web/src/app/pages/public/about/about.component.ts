@@ -26,25 +26,25 @@ export class AboutComponent implements OnInit, OnDestroy {
   // Core values
   values = [
     {
-      icon: '⚡',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773415/jvlbsvaejdc3qynqvbcv.svg',
       title: 'Execution First',
       description:
         'We believe in learning by doing. No endless tutorials, just real work that builds real skills.',
     },
     {
-      icon: '🎯',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762846639/lmndv8wudzixjjvooivz.svg',
       title: 'Results Driven',
       description:
         'Your success is measured by tangible outcomes: portfolio projects, skills gained, and career growth.',
     },
     {
-      icon: '💪',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773382/yggbzca6z685vnulzvdu.svg',
       title: 'No Excuses',
       description:
         'We push you to deliver your best work. Discipline, commitment, and accountability are non-negotiable.',
     },
     {
-      icon: '🌟',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762846823/lz4gk1slmi4o0askv9oe.svg',
       title: 'Elite Mentorship',
       description:
         'Learn from experienced designers who have shipped real products and built successful careers.',
@@ -57,22 +57,22 @@ export class AboutComponent implements OnInit, OnDestroy {
       title: 'Real-World Projects',
       description:
         'Work on actual client projects, not fake case studies. Build a portfolio that stands out.',
-      icon: '💼',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773779/dqt33bkxkc5mtjswrtwj.svg',
     },
     {
       title: 'Personal Mentorship',
       description: 'Get 1-on-1 guidance from industry professionals who care about your growth.',
-      icon: '🎓',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762773415/laetlkfvkjqqvaodzftm.svg',
     },
     {
       title: 'Strict Selection',
       description: 'We only accept serious learners who are ready to commit and deliver results.',
-      icon: '✅',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762846821/kdexbbgzzi5m8h1gymof.svg',
     },
     {
       title: 'Career Support',
       description: 'From portfolio reviews to interview prep, we help you land your dream role.',
-      icon: '🚀',
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762846823/l9wxej1fztcxy5grhhqk.svg',
     },
   ];
 
