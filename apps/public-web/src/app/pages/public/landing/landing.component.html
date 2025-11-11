@@ -148,29 +148,37 @@
   </section>
 
   <!-- Why do you need this -->
-  <section class="bg-white/70 px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
-    <div class="mx-auto pb-7">
-      <h2 class="header">Why do you <span class="text-primary"> need this</span></h2>
-      <p class="mt-3 subtitle">Because the industry doesn’t pay for certificates or theory.</p>
-    </div>
-    <div class="h-full w-full">
-      <div class="gradient-border rounded-3xl w-full mx-auto md:mx-0">
-        <div
-          class="bg-white rounded-3xl h-full w-full p-8 max-md:p-6 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
-        >
-          <h2 class="text-xl font-semibold text-gray-900 mb-4">
-            Skill is not the problem. <span class="text-primary"> Execution is.</span>
-          </h2>
+  <section class="bg-white px-4 md:px-8 lg:px-11 pt-16 max-md:pt-10">
+    <div class="bg-[#D1FAED] p-6 max-md:p-4 rounded-2xl">
+      <div class="mx-auto pb-7">
+        <h2 class="header">Why do you <span class="text-primary"> need this</span></h2>
+        <p class="mt-3 subtitle">Because the industry doesn’t pay for certificates or theory.</p>
+      </div>
+      <div class="h-full w-full grid grid-cols-2 max-md:grid-cols-1">
+        <div class="gradient-border rounded-3xl w-full mx-auto md:mx-0">
+          <div
+            class="bg-white rounded-3xl h-full w-full p-6 max-md:p-4 shadow-[0_10px_40px_rgba(0,0,0,0.05)] hover:shadow-[0_12px_50px_rgba(0,0,0,0.08)] transition-all duration-300"
+          >
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">
+              Skill is not the problem. <span class="text-primary"> Execution is.</span>
+            </h2>
 
-          <p class="text-base leading-relaxed mb-3">
-            Companies and clients do not hire “people who know Figma or React.” They hire people who
-            can ship quality work, independently, with confidence.
-          </p>
-          <p class="text-base leading-relaxed">
-            Most people only learn tools. Very few can deliver real work under pressure, deadlines,
-            clarity, discipline and can handle feedback . This accelerator creates exactly that kind
-            of talent who can handle real clients, real teams, real jobs.
-          </p>
+            <p class="text-base leading-relaxed mb-3">
+              Companies and clients do not hire “people who know Figma or React.” They hire people
+              who can ship quality work, independently, with confidence.
+            </p>
+            <p class="text-base leading-relaxed">
+              Most people only learn tools. Very few can deliver real work under pressure,
+              deadlines, clarity, discipline and can handle feedback . This accelerator creates
+              exactly that kind of talent who can handle real clients, real teams, real jobs.
+            </p>
+          </div>
+        </div>
+        <div class="items-center justify-center flex w-full">
+          <img
+            src="https://res.cloudinary.com/damm9iwho/image/upload/v1762840282/needthis_cfggkb.svg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -426,7 +434,7 @@
     </section>
 
     <!-- EXPECT SECTION -->
-    <section class="mx-auto">
+    <section class="mx-auto bg-[#D1FAED] p-6 max-md:p-4 rounded-3xl">
       <h2 class="header mb-2">What to <span class="text-primary">expect</span></h2>
       <p class="subtitle mb-8">
         You learn by shipping. Expect deadlines, revisions, and standards that mirror real product
@@ -500,8 +508,8 @@
     </section> -->
 
     <!-- SECTION 3: DO NOT APPLY IF -->
-    <section class="mx-auto">
-      <h2 class="header mb-4"><span class="text-primary">Do NOT apply</span> if:</h2>
+    <section class="mx-auto bg-[#FFE0E0] p-6 max-md:-4 rounded-3xl">
+      <h2 class="header mb-4"><span class="text-[#EF0000]">Do NOT apply</span> if:</h2>
 
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div *ngFor="let item of dontApplyReasons" class="border rounded-2xl p-6 bg-white">
@@ -577,7 +585,7 @@
         <div class="grid md:grid-cols-2 gap-8 max-md:gap-6">
           <!-- FREE FEEDBACK CARD -->
           <div
-            class="gradient-border-hover border border-neutral-200 rounded-3xl p-10 max-md:p-6 bg-white"
+            class="gradient-border-hover border border-neutral-200 rounded-3xl p-8 max-md:p-6 bg-white"
           >
             <div
               class="inline-block bg-gradient-to-r from-green-100 to-emerald-100 text-primary text-xs font-bold px-4 py-2 rounded-lg mb-4"
@@ -636,7 +644,7 @@
 
           <!-- PAID CALL CARD -->
           <div
-            class="bg-primary hover:bg-primary text-white rounded-3xl p-10 max-md:p-6 relative overflow-hidden"
+            class="bg-primary hover:bg-primary text-white rounded-3xl p-8 max-md:p-6 relative overflow-hidden"
           >
             <div class="relative z-10">
               <div
@@ -733,22 +741,24 @@
     </section>
 
     <!-- SECTION 2: PERFORMANCE REFUND -->
-    <section class="mx-auto">
+    <section class="mx-auto bg-[#D1FAED] p-6 max-md:p-4 rounded-3xl">
       <h2 class="header mb-2">Performance <span class="text-primary">Refund Confidence</span></h2>
       <p class="text-gray-600 mb-8">
         We reward outcomes. Finish the mentorship and land paid work within 60 days — get your money
         back.
       </p>
 
-      <div class="grid md:grid-cols-3 gap-4 mb-6 bg-white/50">
-        <div *ngFor="let refund of refunds" class="border rounded-2xl p-6 gradient-border-hover">
+      <div class="grid md:grid-cols-3 gap-4 mb-6">
+        <div
+          *ngFor="let refund of refunds"
+          class="border rounded-2xl p-6 gradient-border-hover bg-white"
+        >
           <h4 class="text-base font-semibold mb-2 text-[#171717]">{{ refund.range }}</h4>
           <p class="text-4xl" [innerHTML]="refund.text"></p>
         </div>
       </div>
-    </section>
-    <section class="bg-white py-4">
-      <div class="">
+
+      <div>
         <!-- Top Policy Card -->
         <div class="gradient-border mb-10">
           <div
@@ -771,69 +781,33 @@
           </div>
         </div>
         <!-- Middle Description -->
-        <p class="text-gray-700 mb-8">
+        <p class="text-base font-semibold">
           Different paths. One rule: If you succeed,
           <span class="text-emerald-600 font-medium underline underline-offset-2"
             >your money returns.</span
           >
         </p>
-
-        <!-- 4 Role Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          <div class="border-card text-lg max-md:text-base font-semibold">
-            Professionals → <span class="text-emerald-600">job, hike, freelance</span>
-          </div>
-          <div class="border-card text-lg max-md:text-base font-semibold">
-            Students → <span class="text-emerald-600">job, internship, client</span>
-          </div>
-          <div class="border-card text-lg max-md:text-base font-semibold">
-            Dropouts & switchers →
-            <span class="text-emerald-600">paid work or product</span>
-          </div>
-          <div class="border-card text-lg max-md:text-base font-semibold">
-            Entrepreneurs →
-            <span class="text-emerald-600">revenue or real users</span>
-          </div>
-        </div>
-
-        <!-- No Refund Section -->
-        <h3 class="text-lg font-semibold text-gray-900 mb-4">
-          Who get’s <span class="text-primary font-bold">NO Refund?</span>
-        </h3>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who Disappears
-          </div>
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who wait for guidance
-          </div>
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who fake, or cheat
-          </div>
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who blame life, market, family…
-          </div>
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who refuse to put effort
-          </div>
-          <div class="border-card">
-            <span class="text-red-500 mr-1 text-lg">❌</span> Who expect luck to fix everything
-          </div>
-        </div>
-
-        <!-- Footer Line -->
-        <p class="text-base font-semibold">
-          For detailed information about refunds,
-          <a href="/how-refund-works" class="text-primary hover:text-emerald-500 font-medium"
-            >Click Here</a
-          >
-        </p>
       </div>
+    </section>
+
+    <section class="mx-auto bg-[#FFE0E0] p-6 max-md:-4 rounded-3xl mt-8">
+      <h2 class="header mb-4">❌ Who get’s<span class="text-[#EF0000]"> NO Refund?</span></h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div *ngFor="let item of noRefundReasons" class="border rounded-2xl p-6 bg-white">
+          <img [src]="item.icon" alt="icon" class="w-32 h-32 mb-4 rounded-lg" />
+          <span [innerHTML]="item.title" class="text-xl max-md:lg font-semibold"></span>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-gray-700">
+        This is not for everyone. It is only for
+        <span class="text-primary font-semibold underline">people who want to earn respect</span>
+        through real work.
+      </p>
     </section>
   </div>
   <!-- FAQ -->
-  <section class="border-t border-neutral-200">
+  <section class="">
     <div class="mx-auto px-4 md:px-8 lg:px-11 py-16">
       <h2 class="header">Have any questions?</h2>
       <p class="subtitle mt-3">

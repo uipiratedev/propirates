@@ -265,6 +265,34 @@ export class LandingComponent {
     },
   ];
 
+  // no refund reasons
+  noRefundReasons = [
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842604/63c461ce9f8aa63b0024c9b6c65cab0f0f3228de_tw6qyv.gif',
+      title: 'Who  Disappears',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842601/8c20535a238ea015859679f7e77af68360f5df17_eojcxn.gif',
+      title: 'Who wait for guidance',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842596/ff57adcb11d6f9e5d8641a08c7ba8fce18a6ba17_ksxjlu.gif',
+      title: 'Who  fake, or cheat',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842599/76ee9067f18e87e0ad911d19f672bb3d63ef75f4_acqhai.gif',
+      title: 'Who blame life, market, family...',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842598/992117c9e76abe8d5b6ca19709a2e7ecf6f0c0fd_nc5djt.gif',
+      title: 'Who refuse to put effortk',
+    },
+    {
+      icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842596/cf11d6d095b1805b4f40b12b46b6c369acef37db_u9fahu.gif',
+      title: 'Who expect luck to fix everything',
+    },
+  ];
+
   readonly faqs = [
     {
       q: 'Is this beginner-friendly?',
