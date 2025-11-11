@@ -285,7 +285,7 @@ export class LandingComponent {
     },
     {
       icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842598/992117c9e76abe8d5b6ca19709a2e7ecf6f0c0fd_nc5djt.gif',
-      title: 'Who refuse to put effortk',
+      title: 'Who refuse to put effort',
     },
     {
       icon: 'https://res.cloudinary.com/damm9iwho/image/upload/v1762842596/cf11d6d095b1805b4f40b12b46b6c369acef37db_u9fahu.gif',
