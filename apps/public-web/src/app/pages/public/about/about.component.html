@@ -1,5 +1,5 @@
 <!-- About Page - SEO Optimized with Semantic HTML -->
-<main class="min-h-screen bg-neutral-50 text-neutral-900 [color-scheme:light]" role="main">
+<main class="min-h-screen bg-white text-neutral-900 [color-scheme:light]" role="main">
   <!-- Hero Section -->
   <section
     class="relative bg-gradient-to-b from-[#f9fafb] via-[#f3f4f6] to-[#ffffff] overflow-hidden"
@@ -30,10 +30,10 @@
 
   <!-- Statistics Section -->
   <section
-    class="bg-white py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
+    class="bg-white py-12 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="stats-heading"
   >
-    <div class="max-w-6xl mx-auto">
+    <div class="mx-auto">
       <h2 id="stats-heading" class="sr-only">Our Impact in Numbers</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-md:gap-6">
         <div
@@ -52,10 +52,10 @@
 
   <!-- Mission Section -->
   <section
-    class="bg-neutral-50 py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
+    class="bg-white py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="mission-heading"
   >
-    <div class="max-w-6xl mx-auto">
+    <div class="mx-auto">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <!-- Left Content -->
         <div>
@@ -141,18 +141,16 @@
 
   <!-- Core Values Section -->
   <section
-    class="bg-white py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
+    class="bg-white py-12 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="values-heading"
   >
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+    <div class="mx-auto">
+      <div class="mb-10">
         <span class="bg-badge">OUR VALUES</span>
-        <h2 id="values-heading" class="header mt-4 mb-4">
+        <h2 id="values-heading" class="header mt-4 mb-3">
           What We <span class="text-primary">Stand For</span>
         </h2>
-        <p class="subtitle mx-auto">
-          These principles guide everything we do and everyone we work with.
-        </p>
+        <p class="subtitle">These principles guide everything we do and everyone we work with.</p>
       </div>
 
       <div class="grid md:grid-cols-2 gap-6">
@@ -171,24 +169,22 @@
 
   <!-- What Makes Us Different Section -->
   <section
-    class="bg-neutral-50 py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
+    class="bg-white py-12 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="features-heading"
   >
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+    <div class="mx-auto">
+      <div class="mb-10">
         <span class="bg-badge">WHY CHOOSE US</span>
-        <h2 id="features-heading" class="header mt-4 mb-4">
+        <h2 id="features-heading" class="header mt-4 mb-3">
           What Makes Us <span class="text-primary">Different</span>
         </h2>
-        <p class="subtitle mx-auto">
-          We're not like other design programs. Here's what sets us apart.
-        </p>
+        <p class="subtitle">We're not like other design programs. Here's what sets us apart.</p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         <article
           *ngFor="let feature of features"
-          class="bg-white border border-neutral-200 rounded-2xl p-8 max-md:p-6 hover:border-primary/30 transition-all duration-300"
+          class="bg-white border border-neutral-200 rounded-2xl p-8 max-md:p-6 gradient-border-hover transition-all duration-300"
           [attr.aria-label]="feature.title"
         >
           <div
@@ -206,22 +202,22 @@
 
   <!-- How It Works Section -->
   <section
-    class="bg-white py-16 max-md:py-10 px-4 md:px-8 lg:px-11"
+    class="bg-white py-12 max-md:py-10 px-4 md:px-8 lg:px-11"
     aria-labelledby="process-heading"
   >
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
+    <div class="mx-auto">
+      <div class="mb-10">
         <span class="bg-badge">THE PROCESS</span>
-        <h2 id="process-heading" class="header mt-4 mb-4">
+        <h2 id="process-heading" class="header mt-4 mb-3">
           How It <span class="text-primary">Works</span>
         </h2>
-        <p class="subtitle mx-auto">From application to graduation, here's what you can expect.</p>
+        <p class="subtitle">From application to graduation, here's what you can expect.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Step 1 -->
         <article
-          class="relative p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
+          class="relative gradient-border-hover p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
           aria-label="Step 1: Apply and Get Selected"
         >
           <div
@@ -239,7 +235,7 @@
 
         <!-- Step 2 -->
         <article
-          class="relative p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
+          class="relative gradient-border-hover p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
           aria-label="Step 2: Start Working on Real Projects"
         >
           <div
@@ -257,7 +253,7 @@
 
         <!-- Step 3 -->
         <article
-          class="relative p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
+          class="relative gradient-border-hover p-8 max-md:p-6 rounded-2xl bg-neutral-50 border border-neutral-200"
           aria-label="Step 3: Graduate and Launch Your Career"
         >
           <div
