@@ -22,18 +22,22 @@ export class ApplyNowComponent {
   // Form data
   formData: any = {
     name: '',
-    location: '',
-    status: '',
-    workLink: '',
-    hours: '',
-    acceptDeadlines: '',
-    goal: '',
-    readyToPay: '',
-    reason: '',
+    email: '',
+    program: '',
+    whyAccelerator: '',
+    whereLearnedFrom: '',
+    country: '',
+    city: '',
+    age: '',
+    whatsappNumber: '',
+    currentOccupation: '',
+    currentStatus: '',
+    linkedinProfile: '',
   };
 
   // Go to next step
   next(): void {
+    console.log('📋 Form Data:', this.formData);
     if (this.canProceed() && this.step < this.totalSteps - 1) {
       this.step++;
       this.scrollTop();
@@ -54,21 +58,13 @@ export class ApplyNowComponent {
   canProceed(): boolean {
     switch (this.step) {
       case 0:
-        return this.formData.name.trim() !== '' && this.formData.location.trim() !== '';
+        return this.formData.name.trim() !== '' && this.formData.email.trim() !== '';
       case 1:
-        // return this.formData.workLink.trim() !== '';
+        // OTP verification step - always allow for now
         return true;
       case 2:
-        // return this.formData.hours.trim() !== '' && this.formData.acceptDeadlines.trim() === 'Yes';
-        return true;
-      // case 3:
-      //   return this.formData.goal.trim() !== '';
-      // case 4:
-      //   return (
-      //     this.formData.readyToPay.trim() !== '' &&
-      //     this.formData.reason.trim() !== '' &&
-      //     this.readConfirmation
-      //   );
+        // Validate all fields in step 2
+        return true; // Can add more strict validation if needed
       default:
         return false;
     }
@@ -93,14 +89,17 @@ export class ApplyNowComponent {
     this.readConfirmation = false;
     this.formData = {
       name: '',
-      location: '',
-      status: '',
-      workLink: '',
-      hours: '',
-      acceptDeadlines: '',
-      goal: '',
-      readyToPay: '',
-      reason: '',
+      email: '',
+      program: '',
+      whyAccelerator: '',
+      whereLearnedFrom: '',
+      country: '',
+      city: '',
+      age: '',
+      whatsappNumber: '',
+      currentOccupation: '',
+      currentStatus: '',
+      linkedinProfile: '',
     };
   }
 

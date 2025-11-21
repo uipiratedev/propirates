@@ -99,8 +99,8 @@
 
             <label class="block text-sm">What’s your best email?</label>
             <input
-              type="text"
-              [(ngModel)]="formData.location"
+              type="email"
+              [(ngModel)]="formData.email"
               name="email"
               class="w-full px-4 py-2 border rounded-lg"
               required
@@ -190,15 +190,16 @@
               <div class="space-y-4">
                 <label class="block text-sm">Which program are you applying for?</label>
                 <select
-                  [(ngModel)]="formData.hours"
-                  name="hours"
+                  [(ngModel)]="formData.program"
+                  name="program"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 >
                   <option value="" disabled>Select one</option>
-                  <option>6–8 hours</option>
-                  <option>8–12 hours</option>
-                  <option>12+ hours</option>
+                  <option>UI/UX Design Mentorship</option>
+                  <option>Frontend Development Mentorship</option>
+                  <option>Full-Stack Development Mentorship</option>
+                  <option>Product Design Mentorship</option>
                 </select>
               </div>
               <div class="space-y-4">
@@ -207,10 +208,10 @@
                   <span class="text-subtitle"> (one short sentence)</span></label
                 >
                 <input
-                  type="url"
-                  [(ngModel)]="formData.workLink"
-                  name="workLink"
-                  placeholder="Figma / Behance / GitHub / Drive link"
+                  type="text"
+                  [(ngModel)]="formData.whyAccelerator"
+                  name="whyAccelerator"
+                  placeholder="Enter your reason in one sentence"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 />
@@ -221,15 +222,18 @@
                   >Where did you learn about this talent accelerator from?</label
                 >
                 <select
-                  [(ngModel)]="formData.hours"
-                  name="hours"
+                  [(ngModel)]="formData.whereLearnedFrom"
+                  name="whereLearnedFrom"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 >
                   <option value="" disabled>Select one</option>
-                  <option>6–8 hours</option>
-                  <option>8–12 hours</option>
-                  <option>12+ hours</option>
+                  <option>Social Media (Instagram, Twitter, LinkedIn)</option>
+                  <option>Friend or Colleague Referral</option>
+                  <option>Google Search</option>
+                  <option>YouTube</option>
+                  <option>Community or Forum</option>
+                  <option>Other</option>
                 </select>
               </div>
             </div>
@@ -239,18 +243,18 @@
                 <label class="block text-sm">Where are you currently applying from?</label>
                 <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
                   <input
-                    type="url"
-                    [(ngModel)]="formData.workLink"
-                    name="workLink"
-                    placeholder="Figma / Behance / GitHub / Drive link"
+                    type="text"
+                    [(ngModel)]="formData.country"
+                    name="country"
+                    placeholder="Country"
                     class="w-full px-4 py-2 border rounded-lg"
                     required
                   />
                   <input
-                    type="url"
-                    [(ngModel)]="formData.workLink"
-                    name="workLink"
-                    placeholder="Figma / Behance / GitHub / Drive link"
+                    type="text"
+                    [(ngModel)]="formData.city"
+                    name="city"
+                    placeholder="City"
                     class="w-full px-4 py-2 border rounded-lg"
                     required
                   />
@@ -259,10 +263,10 @@
               <div class="space-y-4">
                 <label class="block text-sm">What is your current age?</label>
                 <input
-                  type="url"
-                  [(ngModel)]="formData.workLink"
-                  name="workLink"
-                  placeholder="Figma / Behance / GitHub / Drive link"
+                  type="number"
+                  [(ngModel)]="formData.age"
+                  name="age"
+                  placeholder="Enter your age"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 />
@@ -271,29 +275,29 @@
               <div class="space-y-4">
                 <label class="block text-sm">What is your whatsapp number?</label>
                 <input
-                  type="url"
-                  [(ngModel)]="formData.workLink"
-                  name="workLink"
-                  placeholder="Figma / Behance / GitHub / Drive link"
+                  type="tel"
+                  [(ngModel)]="formData.whatsappNumber"
+                  name="whatsappNumber"
+                  placeholder="+1234567890"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 />
               </div>
 
               <div class="space-y-4">
-                <label class="block text-sm"
-                  >Where did you learn about this talent accelerator from?</label
-                >
+                <label class="block text-sm">What is your current status?</label>
                 <select
-                  [(ngModel)]="formData.hours"
-                  name="hours"
+                  [(ngModel)]="formData.currentStatus"
+                  name="currentStatus"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 >
                   <option value="" disabled>Select one</option>
-                  <option>6–8 hours</option>
-                  <option>8–12 hours</option>
-                  <option>12+ hours</option>
+                  <option>Student</option>
+                  <option>Working Professional</option>
+                  <option>Freelancer</option>
+                  <option>Unemployed</option>
+                  <option>Career Break</option>
                 </select>
               </div>
             </div>
@@ -302,15 +306,18 @@
               <div class="space-y-4">
                 <label class="block text-sm">What are you doing right now?</label>
                 <select
-                  [(ngModel)]="formData.hours"
-                  name="hours"
+                  [(ngModel)]="formData.currentOccupation"
+                  name="currentOccupation"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 >
                   <option value="" disabled>Select one</option>
-                  <option>6–8 hours</option>
-                  <option>8–12 hours</option>
-                  <option>12+ hours</option>
+                  <option>Studying (College/University)</option>
+                  <option>Working Full-time</option>
+                  <option>Working Part-time</option>
+                  <option>Freelancing</option>
+                  <option>Looking for Opportunities</option>
+                  <option>Building Personal Projects</option>
                 </select>
               </div>
               <div class="space-y-4">
@@ -319,9 +326,9 @@
                 >
                 <input
                   type="url"
-                  [(ngModel)]="formData.workLink"
-                  name="workLink"
-                  placeholder="Figma / Behance / GitHub / Drive link"
+                  [(ngModel)]="formData.linkedinProfile"
+                  name="linkedinProfile"
+                  placeholder="https://linkedin.com/in/yourprofile"
                   class="w-full px-4 py-2 border rounded-lg"
                   required
                 />
