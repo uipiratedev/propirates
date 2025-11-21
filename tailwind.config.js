@@ -20,6 +20,7 @@ module.exports = {
         success: 'var(--color-success)',
         info: 'var(--color-info)',
         'border-badge': '#E5E5E5',
+        subtitle: '#777777',
       },
     },
   },

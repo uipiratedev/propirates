@@ -15,18 +15,37 @@
       <span class="font-semibold tracking-tight text-3xl max-md:text-2xl">ProPirates</span>
     </a>
     <div class="flex items-center gap-4">
+      <!-- Show user profile when authenticated -->
+      @if (authService.isAuthenticated()) {
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-10 h-10 max-md:w-9 max-md:h-9 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-sm"
+          >
+            {{ getUserInitials() }}
+          </div>
+          <span class="font-medium text-gray-800 max-md:hidden">
+            {{ authService.currentUser()?.name }}
+          </span>
+        </div>
+      </div>
+      } @else {
+      <!-- Show buttons when not authenticated -->
+      @if (isrouteApplyNow) {
       <a
-        href="/apply-now"
+        routerLink="/"
+        class="rounded-xl max-md:rounded-lg px-4 py-2 max-md:py-1.5 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
+      >
+        Back to Home
+      </a>
+      } @else {
+      <a
+        routerLink="/apply-now"
         class="rounded-xl max-md:rounded-lg px-4 py-2 max-md:py-1.5 bg-primary hover:bg-emerald-500 text-white font-semibold transition"
       >
         Apply Now
       </a>
-      <!-- <a
-        href="/login"
-        class="rounded-2xl px-6 py-2 border border-neutral-300 hover:border-neutral-400 transition max-md:hidden"
-      >
-        Login
-      </a> -->
+      } }
     </div>
   </div>
 </header>
